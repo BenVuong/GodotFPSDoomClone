@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=15 format=3 uid="uid://dsnp3jvqwugj3"]
 
+[ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
 [ext_resource type="Texture2D" uid="uid://dyos55ixoatn7" path="res://textures/STEEL_1A.png" id="1_wmm57"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
 [ext_resource type="PackedScene" uid="uid://ddtpe3rawg5i4" path="res://test_level_textured.tscn" id="3_70xdc"]
 [ext_resource type="PackedScene" uid="uid://b8gomniy4e6pr" path="res://map.tscn" id="4_smqhs"]
+[ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/enemy.tscn" id="6_6wrvt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -37,6 +39,7 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00858426, -0.0740126, -0.0575289)
+script = ExtResource("1_7j3t3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mpyct")
@@ -76,3 +79,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0137
 
 [node name="map" parent="." instance=ExtResource("4_smqhs")]
 transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 17.745, 0.0740124, 1.91692)
+
+[node name="enemy" parent="." instance=ExtResource("6_6wrvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9696, 1.36654, -2.69108)
