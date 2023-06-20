@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://deha4dss4pckq"]
+
+[ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_1gddx"]
+[ext_resource type="Resource" uid="uid://7h57nuq1xmoi" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2_df1aj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxs2v"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="QodotMap" type="Node3D" parent="."]
+script = ExtResource("1_1gddx")
+map_file = "C:/Users/elric/Documents/GodotFPSDoomClone/UntitledDoomClone/maps/trenchBoomMapTest.map"
+entity_fgd = ExtResource("2_df1aj")
+texture_file_extensions = PackedStringArray("png")
+default_material = SubResource("StandardMaterial3D_sxs2v")

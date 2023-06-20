@@ -1,0 +1,923 @@
+mtllib trenchBoomMapTest.mtl
+# vertices
+v -96 16 -128
+v -96 16 112
+v -96 32 112
+v -96 32 -128
+v 128 32 112
+v 128 16 112
+v 128 16 -128
+v 128 32 -128
+v -96 32 96
+v -96 32 112
+v -96 96 112
+v -96 96 96
+v 128 96 112
+v 128 32 112
+v 128 32 96
+v 128 96 96
+v -96 32 -128
+v -96 32 96
+v -96 96 96
+v -96 96 -128
+v -80 96 96
+v -80 32 96
+v -80 32 -128
+v -80 96 -128
+v 112 32 -128
+v 112 32 -32
+v 112 96 -32
+v 112 96 -128
+v 128 96 -32
+v 128 32 -32
+v 128 32 -128
+v 128 96 -128
+v 112 32 16
+v 112 32 112
+v 112 96 112
+v 112 96 16
+v 128 96 112
+v 128 32 112
+v 128 32 16
+v 128 96 16
+v 128 16 -32
+v 128 16 16
+v 128 32 16
+v 128 32 -32
+v 400 32 16
+v 400 16 16
+v 400 16 -32
+v 400 32 -32
+v 128 32 -48
+v 128 32 -32
+v 128 96 -32
+v 128 96 -48
+v 400 96 -32
+v 400 32 -32
+v 400 32 -48
+v 400 96 -48
+v 128 32 16
+v 128 32 32
+v 128 96 32
+v 128 96 16
+v 448 96 32
+v 448 32 32
+v 448 32 16
+v 448 96 16
+v 400 16 -256
+v 400 16 16
+v 400 32 16
+v 400 32 -256
+v 448 32 16
+v 448 16 16
+v 448 16 -256
+v 448 32 -256
+v 400 16 -528
+v 400 16 -256
+v 400 32 -256
+v 400 32 -528
+v 448 32 -256
+v 448 16 -256
+v 448 16 -528
+v 448 32 -528
+v 128 16 -528
+v 128 16 -480
+v 128 32 -480
+v 128 32 -528
+v 400 32 -480
+v 400 16 -480
+v 400 16 -528
+v 400 32 -528
+v 16 16 -528
+v 16 16 -480
+v 16 32 -480
+v 16 32 -528
+v 128 32 -480
+v 128 16 -480
+v 128 16 -528
+v 128 32 -528
+v 16 16 -480
+v 16 16 -128
+v 16 32 -128
+v 16 32 -480
+v 64 32 -128
+v 64 16 -128
+v 64 16 -480
+v 64 32 -480
+v 80 32 -144
+v 80 32 -128
+v 80 96 -128
+v 80 96 -144
+v 128 96 -128
+v 128 32 -128
+v 128 32 -144
+v 128 96 -144
+v 0 32 -528
+v 0 32 -128
+v 0 96 -128
+v 0 96 -528
+v 16 96 -128
+v 16 32 -128
+v 16 32 -528
+v 16 96 -528
+v 64 32 -480
+v 64 32 -128
+v 64 96 -128
+v 64 96 -480
+v 80 96 -128
+v 80 32 -128
+v 80 32 -480
+v 80 96 -480
+v 0 32 -544
+v 0 32 -528
+v 0 96 -528
+v 0 96 -544
+v 448 96 -528
+v 448 32 -528
+v 448 32 -544
+v 448 96 -544
+v 80 32 -480
+v 80 32 -464
+v 80 96 -464
+v 80 96 -480
+v 400 96 -464
+v 400 32 -464
+v 400 32 -480
+v 400 96 -480
+v 448 32 -544
+v 448 32 32
+v 448 96 32
+v 448 96 -544
+v 464 96 32
+v 464 32 32
+v 464 32 -544
+v 464 96 -544
+v 384 32 -464
+v 384 32 -48
+v 384 96 -48
+v 384 96 -464
+v 400 96 -48
+v 400 32 -48
+v 400 32 -464
+v 400 96 -464
+v -80 96 -128
+v -80 96 96
+v -80 112 96
+v -80 112 -128
+v 112 112 96
+v 112 96 96
+v 112 96 -128
+v 112 112 -128
+v -80 32 -144
+v -80 32 -128
+v -80 96 -128
+v -80 96 -144
+v 0 96 -128
+v 0 32 -128
+v 0 32 -144
+v 0 96 -144
+v -96 16 -128
+v -96 16 112
+v -96 32 112
+v -96 32 -128
+v 128 32 112
+v 128 16 112
+v 128 16 -128
+v 128 32 -128
+v 16 96 -480
+v 16 96 -128
+v 16 112 -128
+v 16 112 -480
+v 64 112 -128
+v 64 96 -128
+v 64 96 -480
+v 64 112 -480
+v 128 96 -528
+v 128 96 -480
+v 128 112 -480
+v 128 112 -528
+v 400 112 -480
+v 400 96 -480
+v 400 96 -528
+v 400 112 -528
+v 16 96 -528
+v 16 96 -480
+v 16 112 -480
+v 16 112 -528
+v 128 112 -480
+v 128 96 -480
+v 128 96 -528
+v 128 112 -528
+v 400 96 -528
+v 400 96 -256
+v 400 112 -256
+v 400 112 -528
+v 448 112 -256
+v 448 96 -256
+v 448 96 -528
+v 448 112 -528
+v 400 96 -256
+v 400 96 16
+v 400 112 16
+v 400 112 -256
+v 448 112 16
+v 448 96 16
+v 448 96 -256
+v 448 112 -256
+v 112 96 -32
+v 112 96 16
+v 112 112 16
+v 112 112 -32
+v 400 112 16
+v 400 96 16
+v 400 96 -32
+v 400 112 -32
+
+# texture coordinates
+vt 2 0.25
+vt -1.75 0.25
+vt -1.75 0.5
+vt 2 0.5
+vt 2.75 0.5
+vt -0.75 0.5
+vt -0.75 0.25
+vt 2.75 0.25
+vt 2.75 -1.75
+vt -0.75 -1.75
+vt -0.75 2
+vt 2.75 2
+vt 1 0.75
+vt 1 1
+vt 2 1
+vt 2 0.75
+vt 2.25 2
+vt -1.25 2
+vt -1.25 1
+vt 2.25 1
+vt -1.25 0.75
+vt 2.25 0.75
+vt -1.5 1.25
+vt -1.75 1.25
+vt -1.5 0.25
+vt 2 -1
+vt 2 -1.25
+vt 1 -1.25
+vt 1 -1
+vt -1.25 -1
+vt -1.25 -1.25
+vt 2.25 -1.25
+vt 2.25 -1
+vt 1.25 0.25
+vt 1.5 0.25
+vt 1.5 1.25
+vt 1.25 1.25
+vt 1.25 1
+vt -0.25 1
+vt -0.25 2
+vt 1.25 2
+vt 2 2
+vt 2 1.75
+vt 1 1.75
+vt 1 2
+vt -0.25 1.75
+vt 1.25 1.75
+vt 0.25 1
+vt 0.25 2
+vt 2.5 -1.5
+vt 2.25 -1.5
+vt 2.25 -0.5
+vt 2.5 -0.5
+vt -1.25 1.75
+vt 0.25 1.75
+vt 0.5 0.25
+vt -0.25 0.25
+vt -0.25 0.5
+vt 0.5 0.5
+vt 6.5 0.5
+vt 2.25 0.5
+vt 2.25 0.25
+vt 6.5 0.25
+vt 6.5 -0.25
+vt 2.25 -0.25
+vt 1.25 0.75
+vt 0.5 0.75
+vt 1.25 0.5
+vt 6 2
+vt 1.75 2
+vt 1.75 1
+vt 6 1
+vt 6 -1
+vt 1.75 -1
+vt 1.75 -1.25
+vt 6 -1.25
+vt 1 -0.25
+vt 1 -0
+vt 2 -0
+vt 2 -0.25
+vt 6.75 2
+vt 6.75 1
+vt 6.75 -0
+vt 1.75 -0
+vt 1.75 -0.25
+vt 6.75 -0.25
+vt 3.5 0.25
+vt 3.5 0.5
+vt -7.25 0.5
+vt -6.5 0.5
+vt -6.5 0.25
+vt -7.25 0.25
+vt -0.75 -7.25
+vt -0.75 -6.5
+vt 3.5 -6.5
+vt 3.5 -7.25
+vt -7.5 0.5
+vt -6.75 0.5
+vt -6.75 0.75
+vt -7.5 0.75
+vt 8.5 0.25
+vt 4.25 0.25
+vt 4.25 0.5
+vt 8.5 0.5
+vt 4.25 -7.25
+vt 4.25 -6.5
+vt 8.5 -6.5
+vt 8.5 -7.25
+vt -2.5 0.5
+vt -2.5 0.25
+vt -6.75 0.25
+vt -6.75 -7.5
+vt -2.5 -7.5
+vt -2.5 -8.25
+vt -6.75 -8.25
+vt -8.25 0.5
+vt -7.5 0.25
+vt -8.25 0.25
+vt -2.75 0.5
+vt -1 0.5
+vt -1 0.25
+vt -2.75 0.25
+vt -2.75 -7.5
+vt -1 -7.5
+vt -1 -8.25
+vt -2.75 -8.25
+vt -7.75 0.25
+vt -2.25 0.25
+vt -2.25 0.5
+vt -7.75 0.5
+vt 0.25 0.75
+vt -0.5 0.75
+vt -0.5 0.5
+vt 0.25 0.5
+vt -2.25 -0.25
+vt -7.75 -0.25
+vt 1 -2.25
+vt 1 -2
+vt 2 -2
+vt 2 -2.25
+vt 1.25 -2
+vt 1.25 -2.25
+vt 7.75 1
+vt 1.5 1
+vt 1.5 2
+vt 7.75 2
+vt 1.5 -0
+vt 1.5 -0.25
+vt 7.75 -0.25
+vt 7.75 -0
+vt 0.25 0.25
+vt 0.5 1.25
+vt 0.25 1.25
+vt 7 1
+vt 7 2
+vt 1.5 0.75
+vt 7 0.75
+vt -0.5 0.25
+vt -0.5 1.25
+vt -0.75 1.25
+vt -8.75 0.25
+vt -8.5 0.25
+vt -8.5 1.25
+vt -8.75 1.25
+vt -6.25 2
+vt 0.75 2
+vt 0.75 1
+vt -6.25 1
+vt -6.25 8.75
+vt 0.75 8.75
+vt 0.75 9
+vt -6.25 9
+vt 2 9
+vt 2 8.75
+vt 1 8.75
+vt 1 9
+vt -7.5 1.25
+vt -7.75 1.25
+vt -6 2
+vt -1 2
+vt -1 1
+vt -6 1
+vt -6 7.75
+vt -1 7.75
+vt -1 8
+vt -6 8
+vt 2 8
+vt 2 7.75
+vt 1 7.75
+vt 1 8
+vt -9.25 1
+vt -9.25 2
+vt 6.5 1.25
+vt 6.25 1.25
+vt 6.25 0.25
+vt -0.25 -7.25
+vt -0.25 -7
+vt -9.25 -7
+vt -9.25 -7.25
+vt 1 -7.25
+vt 1 -7
+vt 2 -7
+vt 2 -7.25
+vt -8 1
+vt -1.5 1
+vt -1.5 2
+vt -8 2
+vt 6.5 1.5
+vt 6.25 1.5
+vt 6.25 0.5
+vt -1.5 -6.25
+vt -1.5 -6
+vt -8 -6
+vt -8 -6.25
+vt 1 -6.25
+vt 1 -6
+vt 2 -6
+vt 2 -6.25
+vt 2 1.25
+vt -1.5 1.5
+vt 2 1.5
+vt 2.5 1.5
+vt -0.5 1.5
+vt 2.5 1.25
+vt -0.5 -1.5
+vt -0.5 2
+vt 2.5 2
+vt 2.75 1.25
+vt -0.75 1
+vt 2.75 1
+vt 2.5 0.25
+vt 2.25 1.25
+vt 0.5 2
+vt 0.5 1
+vt 0.5 -2
+vt -0.75 -2
+vt -0.75 -2.25
+vt 0.5 -2.25
+vt -2.25 1.25
+vt -2.25 1.5
+vt -7.75 1.5
+vt -0.5 1.75
+vt 0.25 1.5
+vt -0.25 1.25
+vt -0.25 1.5
+vt 0.5 1.5
+vt -7.5 1.5
+vt -6.75 1.5
+vt -6.75 1.75
+vt -7.5 1.75
+vt -2.5 1.5
+vt -2.5 1.25
+vt -6.75 1.25
+vt -8.25 1.5
+vt -8.25 1.25
+vt -2.75 1.5
+vt -1 1.5
+vt -1 1.25
+vt -2.75 1.25
+vt 8.5 1.25
+vt 4.25 1.25
+vt 4.25 1.5
+vt 8.5 1.5
+vt -7.25 1.5
+vt -6.5 1.5
+vt -6.5 1.25
+vt -7.25 1.25
+vt 3.5 1.25
+vt -0.75 1.5
+vt 3.5 1.5
+vt 0.5 1.75
+vt 1.25 1.5
+
+# normals
+vn -1 0 -0
+vn 0 0 1
+vn 0 -1 -0
+vn 0 1 -0
+vn 0 0 -1
+vn 1 0 -0
+
+o entity0_brush0
+usemtl retroTexturePack/FLOOR_1A
+f  1/1/1  2/2/1  3/3/1  4/4/1
+usemtl retroTexturePack/FLOOR_1A
+f  5/5/2  3/6/2  2/7/2  6/8/2
+usemtl retroTexturePack/FLOOR_1A
+f  6/9/3  2/10/3  1/11/3  7/12/3
+usemtl retroTexturePack/FLOOR_1A
+f  8/12/4  4/11/4  3/10/4  5/9/4
+usemtl retroTexturePack/FLOOR_1A
+f  7/8/5  1/7/5  4/6/5  8/5/5
+usemtl retroTexturePack/FLOOR_1A
+f  8/4/6  5/3/6  6/2/6  7/1/6
+
+o entity0_brush1
+usemtl retroTexturePack/TECH_0A
+f  9/13/1  10/14/1  11/15/1  12/16/1
+usemtl retroTexturePack/TECH_0A
+f  13/17/2  11/18/2  10/19/2  14/20/2
+usemtl retroTexturePack/TECH_0A
+f  14/20/3  10/19/3  9/21/3  15/22/3
+usemtl retroTexturePack/TECH_0A
+f  16/22/4  12/21/4  11/19/4  13/20/4
+usemtl retroTexturePack/TECH_0A
+f  15/20/5  9/19/5  12/18/5  16/17/5
+usemtl retroTexturePack/TECH_0A
+f  16/23/6  13/24/6  14/2/6  15/25/6
+
+o entity0_brush2
+usemtl retroTexturePack/TECH_0A
+f  17/20/1  18/19/1  19/18/1  20/17/1
+usemtl retroTexturePack/TECH_0A
+f  21/26/2  19/27/2  18/28/2  22/29/2
+usemtl retroTexturePack/TECH_0A
+f  22/30/3  18/31/3  17/32/3  23/33/3
+usemtl retroTexturePack/TECH_0A
+f  24/33/4  20/32/4  19/31/4  21/30/4
+usemtl retroTexturePack/TECH_0A
+f  23/34/5  17/35/5  20/36/5  24/37/5
+usemtl retroTexturePack/TECH_0A
+f  24/17/6  21/18/6  22/19/6  23/20/6
+
+o entity0_brush3
+usemtl retroTexturePack/TECH_0A
+f  25/38/1  26/39/1  27/40/1  28/41/1
+usemtl retroTexturePack/TECH_0A
+f  29/42/2  27/43/2  26/44/2  30/45/2
+usemtl retroTexturePack/TECH_0A
+f  30/40/3  26/46/3  25/47/3  31/41/3
+usemtl retroTexturePack/TECH_0A
+f  32/41/4  28/47/4  27/46/4  29/40/4
+usemtl retroTexturePack/TECH_0A
+f  31/2/5  25/25/5  28/23/5  32/24/5
+usemtl retroTexturePack/TECH_0A
+f  32/41/6  29/40/6  30/39/6  31/38/6
+
+o entity0_brush4
+usemtl retroTexturePack/TECH_0A
+f  33/48/1  34/19/1  35/18/1  36/49/1
+usemtl retroTexturePack/TECH_0A
+f  37/50/2  35/51/2  34/52/2  38/53/2
+usemtl retroTexturePack/TECH_0A
+f  38/18/3  34/54/3  33/55/3  39/49/3
+usemtl retroTexturePack/TECH_0A
+f  40/49/4  36/55/4  35/54/4  37/18/4
+usemtl retroTexturePack/TECH_0A
+f  39/2/5  33/25/5  36/23/5  40/24/5
+usemtl retroTexturePack/TECH_0A
+f  40/49/6  37/18/6  38/19/6  39/48/6
+
+o entity0_brush5
+usemtl retroTexturePack/FLOOR_1A
+f  41/56/1  42/57/1  43/58/1  44/59/1
+usemtl retroTexturePack/FLOOR_1A
+f  45/60/2  43/61/2  42/62/2  46/63/2
+usemtl retroTexturePack/FLOOR_1A
+f  46/64/3  42/65/3  41/61/3  47/60/3
+usemtl retroTexturePack/FLOOR_1A
+f  48/60/4  44/61/4  43/65/4  45/64/4
+usemtl retroTexturePack/FLOOR_1A
+f  47/63/5  41/62/5  44/61/5  48/60/5
+usemtl retroTexturePack/FLOOR_1A
+f  48/66/6  45/67/6  46/59/6  47/68/6
+
+o entity0_brush6
+usemtl retroTexturePack/TECH_0A
+f  49/28/1  50/29/1  51/26/1  52/27/1
+usemtl retroTexturePack/TECH_0A
+f  53/69/2  51/70/2  50/71/2  54/72/2
+usemtl retroTexturePack/TECH_0A
+f  54/73/3  50/74/3  49/75/3  55/76/3
+usemtl retroTexturePack/TECH_0A
+f  56/76/4  52/75/4  51/74/4  53/73/4
+usemtl retroTexturePack/TECH_0A
+f  55/72/5  49/71/5  52/70/5  56/69/5
+usemtl retroTexturePack/TECH_0A
+f  56/27/6  53/26/6  54/29/6  55/28/6
+
+o entity0_brush7
+usemtl retroTexturePack/TECH_0A
+f  57/77/1  58/78/1  59/79/1  60/80/1
+usemtl retroTexturePack/TECH_0A
+f  61/81/2  59/70/2  58/71/2  62/82/2
+usemtl retroTexturePack/TECH_0A
+f  62/83/3  58/84/3  57/85/3  63/86/3
+usemtl retroTexturePack/TECH_0A
+f  64/86/4  60/85/4  59/84/4  61/83/4
+usemtl retroTexturePack/TECH_0A
+f  63/82/5  57/71/5  60/70/5  64/81/5
+usemtl retroTexturePack/TECH_0A
+f  64/80/6  61/79/6  62/78/6  63/77/6
+
+o entity0_brush8
+usemtl retroTexturePack/FLOOR_1A
+f  65/87/1  66/7/1  67/6/1  68/88/1
+usemtl retroTexturePack/FLOOR_1A
+f  69/89/2  67/90/2  66/91/2  70/92/2
+usemtl retroTexturePack/FLOOR_1A
+f  70/93/3  66/94/3  65/95/3  71/96/3
+usemtl retroTexturePack/FLOOR_1A
+f  72/96/4  68/95/4  67/94/4  69/93/4
+usemtl retroTexturePack/FLOOR_1A
+f  71/97/5  65/98/5  68/99/5  72/100/5
+usemtl retroTexturePack/FLOOR_1A
+f  72/88/6  69/6/6  70/7/6  71/87/6
+
+o entity0_brush9
+usemtl retroTexturePack/FLOOR_1A
+f  73/101/1  74/102/1  75/103/1  76/104/1
+usemtl retroTexturePack/FLOOR_1A
+f  77/89/2  75/90/2  74/91/2  78/92/2
+usemtl retroTexturePack/FLOOR_1A
+f  78/105/3  74/106/3  73/107/3  79/108/3
+usemtl retroTexturePack/FLOOR_1A
+f  80/108/4  76/107/4  75/106/4  77/105/4
+usemtl retroTexturePack/FLOOR_1A
+f  79/97/5  73/98/5  76/99/5  80/100/5
+usemtl retroTexturePack/FLOOR_1A
+f  80/104/6  77/103/6  78/102/6  79/101/6
+
+o entity0_brush10
+usemtl retroTexturePack/FLOOR_1A
+f  81/97/1  82/98/1  83/99/1  84/100/1
+usemtl retroTexturePack/FLOOR_1A
+f  85/98/2  83/109/2  82/110/2  86/111/2
+usemtl retroTexturePack/FLOOR_1A
+f  86/112/3  82/113/3  81/114/3  87/115/3
+usemtl retroTexturePack/FLOOR_1A
+f  88/115/4  84/114/4  83/113/4  85/112/4
+usemtl retroTexturePack/FLOOR_1A
+f  87/111/5  81/110/5  84/109/5  88/98/5
+usemtl retroTexturePack/FLOOR_1A
+f  88/116/6  85/97/6  86/117/6  87/118/6
+
+o entity0_brush11
+usemtl retroTexturePack/FLOOR_1A
+f  89/97/1  90/98/1  91/99/1  92/100/1
+usemtl retroTexturePack/FLOOR_1A
+f  93/119/2  91/120/2  90/121/2  94/122/2
+usemtl retroTexturePack/FLOOR_1A
+f  94/123/3  90/124/3  89/125/3  95/126/3
+usemtl retroTexturePack/FLOOR_1A
+f  96/126/4  92/125/4  91/124/4  93/123/4
+usemtl retroTexturePack/FLOOR_1A
+f  95/122/5  89/121/5  92/120/5  96/119/5
+usemtl retroTexturePack/FLOOR_1A
+f  96/116/6  93/97/6  94/117/6  95/118/6
+
+o entity0_brush12
+usemtl retroTexturePack/FLOOR_1A
+f  97/127/1  98/128/1  99/129/1  100/130/1
+usemtl retroTexturePack/FLOOR_1A
+f  101/131/2  99/132/2  98/133/2  102/134/2
+usemtl retroTexturePack/FLOOR_1A
+f  102/129/3  98/135/3  97/136/3  103/130/3
+usemtl retroTexturePack/FLOOR_1A
+f  104/130/4  100/136/4  99/135/4  101/129/4
+usemtl retroTexturePack/FLOOR_1A
+f  103/56/5  97/57/5  100/58/5  104/59/5
+usemtl retroTexturePack/FLOOR_1A
+f  104/130/6  101/129/6  102/128/6  103/127/6
+
+o entity0_brush13
+usemtl retroTexturePack/TECH_0A
+f  105/137/1  106/138/1  107/139/1  108/140/1
+usemtl retroTexturePack/TECH_0A
+f  109/42/2  107/41/2  106/38/2  110/15/2
+usemtl retroTexturePack/TECH_0A
+f  110/139/3  106/141/3  105/142/3  111/140/3
+usemtl retroTexturePack/TECH_0A
+f  112/140/4  108/142/4  107/141/4  109/139/4
+usemtl retroTexturePack/TECH_0A
+f  111/15/5  105/38/5  108/41/5  112/42/5
+usemtl retroTexturePack/TECH_0A
+f  112/140/6  109/139/6  110/138/6  111/137/6
+
+o entity0_brush14
+usemtl retroTexturePack/TECH_0A
+f  113/143/1  114/144/1  115/145/1  116/146/1
+usemtl retroTexturePack/TECH_0A
+f  117/79/2  115/80/2  114/77/2  118/78/2
+usemtl retroTexturePack/TECH_0A
+f  118/147/3  114/148/3  113/149/3  119/150/3
+usemtl retroTexturePack/TECH_0A
+f  120/150/4  116/149/4  115/148/4  117/147/4
+usemtl retroTexturePack/TECH_0A
+f  119/151/5  113/56/5  116/152/5  120/153/5
+usemtl retroTexturePack/TECH_0A
+f  120/146/6  117/145/6  118/144/6  119/143/6
+
+o entity0_brush15
+usemtl retroTexturePack/TECH_0A
+f  121/154/1  122/144/1  123/145/1  124/155/1
+usemtl retroTexturePack/TECH_0A
+f  125/15/2  123/16/2  122/13/2  126/14/2
+usemtl retroTexturePack/TECH_0A
+f  126/144/3  122/156/3  121/157/3  127/154/3
+usemtl retroTexturePack/TECH_0A
+f  128/154/4  124/157/4  123/156/4  125/144/4
+usemtl retroTexturePack/TECH_0A
+f  127/7/5  121/158/5  124/159/5  128/160/5
+usemtl retroTexturePack/TECH_0A
+f  128/155/6  125/145/6  126/144/6  127/154/6
+
+o entity0_brush16
+usemtl retroTexturePack/TECH_0A
+f  129/161/1  130/162/1  131/163/1  132/164/1
+usemtl retroTexturePack/TECH_0A
+f  133/165/2  131/166/2  130/167/2  134/168/2
+usemtl retroTexturePack/TECH_0A
+f  134/169/3  130/170/3  129/171/3  135/172/3
+usemtl retroTexturePack/TECH_0A
+f  136/172/4  132/171/4  131/170/4  133/169/4
+usemtl retroTexturePack/TECH_0A
+f  135/168/5  129/167/5  132/166/5  136/165/5
+usemtl retroTexturePack/TECH_0A
+f  136/173/6  133/174/6  134/175/6  135/176/6
+
+o entity0_brush17
+usemtl retroTexturePack/TECH_0A
+f  137/127/1  138/117/1  139/177/1  140/178/1
+usemtl retroTexturePack/TECH_0A
+f  141/179/2  139/180/2  138/181/2  142/182/2
+usemtl retroTexturePack/TECH_0A
+f  142/183/3  138/184/3  137/185/3  143/186/3
+usemtl retroTexturePack/TECH_0A
+f  144/186/4  140/185/4  139/184/4  141/183/4
+usemtl retroTexturePack/TECH_0A
+f  143/182/5  137/181/5  140/180/5  144/179/5
+usemtl retroTexturePack/TECH_0A
+f  144/187/6  141/188/6  142/189/6  143/190/6
+
+o entity0_brush18
+usemtl retroTexturePack/TECH_0A
+f  145/191/1  146/39/1  147/40/1  148/192/1
+usemtl retroTexturePack/TECH_0A
+f  149/193/2  147/194/2  146/195/2  150/63/2
+usemtl retroTexturePack/TECH_0A
+f  150/196/3  146/197/3  145/198/3  151/199/3
+usemtl retroTexturePack/TECH_0A
+f  152/199/4  148/198/4  147/197/4  149/196/4
+usemtl retroTexturePack/TECH_0A
+f  151/200/5  145/201/5  148/202/5  152/203/5
+usemtl retroTexturePack/TECH_0A
+f  152/192/6  149/40/6  150/39/6  151/191/6
+
+o entity0_brush19
+usemtl retroTexturePack/TECH_0A
+f  153/204/1  154/205/1  155/206/1  156/207/1
+usemtl retroTexturePack/TECH_0A
+f  157/208/2  155/209/2  154/210/2  158/60/2
+usemtl retroTexturePack/TECH_0A
+f  158/211/3  154/212/3  153/213/3  159/214/3
+usemtl retroTexturePack/TECH_0A
+f  160/214/4  156/213/4  155/212/4  157/211/4
+usemtl retroTexturePack/TECH_0A
+f  159/215/5  153/216/5  156/217/5  160/218/5
+usemtl retroTexturePack/TECH_0A
+f  160/207/6  157/206/6  158/205/6  159/204/6
+
+o entity0_brush20
+usemtl retroTexturePack/LIGHT_1B
+f  161/219/1  162/23/1  163/220/1  164/221/1
+usemtl retroTexturePack/LIGHT_1B
+f  165/222/2  163/223/2  162/159/2  166/224/2
+usemtl retroTexturePack/LIGHT_1B
+f  166/50/3  162/225/3  161/226/3  167/227/3
+usemtl retroTexturePack/LIGHT_1B
+f  168/227/4  164/226/4  163/225/4  165/50/4
+usemtl retroTexturePack/LIGHT_1B
+f  167/224/5  161/159/5  164/223/5  168/222/5
+usemtl retroTexturePack/LIGHT_1B
+f  168/228/6  165/160/6  166/229/6  167/230/6
+
+o entity0_brush21
+usemtl retroTexturePack/TECH_0A
+f  169/231/1  170/62/1  171/232/1  172/224/1
+usemtl retroTexturePack/TECH_0A
+f  173/233/2  171/11/2  170/229/2  174/234/2
+usemtl retroTexturePack/TECH_0A
+f  174/235/3  170/236/3  169/237/3  175/238/3
+usemtl retroTexturePack/TECH_0A
+f  176/238/4  172/237/4  171/236/4  173/235/4
+usemtl retroTexturePack/TECH_0A
+f  175/234/5  169/229/5  172/11/5  176/233/5
+usemtl retroTexturePack/TECH_0A
+f  176/140/6  173/139/6  174/138/6  175/137/6
+
+o entity0_brush22
+usemtl retroTexturePack/FLOOR_1A
+f  177/1/1  178/2/1  179/3/1  180/4/1
+usemtl retroTexturePack/FLOOR_1A
+f  181/5/2  179/6/2  178/7/2  182/8/2
+usemtl retroTexturePack/FLOOR_1A
+f  182/9/3  178/10/3  177/11/3  183/12/3
+usemtl retroTexturePack/FLOOR_1A
+f  184/12/4  180/11/4  179/10/4  181/9/4
+usemtl retroTexturePack/FLOOR_1A
+f  183/8/5  177/7/5  180/6/5  184/5/5
+usemtl retroTexturePack/FLOOR_1A
+f  184/4/6  181/3/6  182/2/6  183/1/6
+
+o entity0_brush23
+usemtl retroTexturePack/PIPES_2A
+f  185/178/1  186/239/1  187/240/1  188/241/1
+usemtl retroTexturePack/PIPES_2A
+f  189/55/2  187/242/2  186/223/2  190/243/2
+usemtl retroTexturePack/PIPES_2A
+f  190/129/3  186/135/3  185/136/3  191/130/3
+usemtl retroTexturePack/PIPES_2A
+f  192/130/4  188/136/4  187/135/4  189/129/4
+usemtl retroTexturePack/PIPES_2A
+f  191/152/5  185/244/5  188/245/5  192/246/5
+usemtl retroTexturePack/PIPES_2A
+f  192/241/6  189/240/6  190/239/6  191/178/6
+
+o entity0_brush24
+usemtl retroTexturePack/PIPES_2A
+f  193/247/1  194/248/1  195/249/1  196/250/1
+usemtl retroTexturePack/PIPES_2A
+f  197/248/2  195/251/2  194/252/2  198/253/2
+usemtl retroTexturePack/PIPES_2A
+f  198/112/3  194/113/3  193/114/3  199/115/3
+usemtl retroTexturePack/PIPES_2A
+f  200/115/4  196/114/4  195/113/4  197/112/4
+usemtl retroTexturePack/PIPES_2A
+f  199/253/5  193/252/5  196/251/5  200/248/5
+usemtl retroTexturePack/PIPES_2A
+f  200/254/6  197/247/6  198/177/6  199/255/6
+
+o entity0_brush25
+usemtl retroTexturePack/PIPES_2A
+f  201/247/1  202/248/1  203/249/1  204/250/1
+usemtl retroTexturePack/PIPES_2A
+f  205/256/2  203/257/2  202/258/2  206/259/2
+usemtl retroTexturePack/PIPES_2A
+f  206/123/3  202/124/3  201/125/3  207/126/3
+usemtl retroTexturePack/PIPES_2A
+f  208/126/4  204/125/4  203/124/4  205/123/4
+usemtl retroTexturePack/PIPES_2A
+f  207/259/5  201/258/5  204/257/5  208/256/5
+usemtl retroTexturePack/PIPES_2A
+f  208/254/6  205/247/6  206/177/6  207/255/6
+
+o entity0_brush26
+usemtl retroTexturePack/PIPES_2A
+f  209/260/1  210/261/1  211/262/1  212/263/1
+usemtl retroTexturePack/PIPES_2A
+f  213/264/2  211/265/2  210/266/2  214/267/2
+usemtl retroTexturePack/PIPES_2A
+f  214/105/3  210/106/3  209/107/3  215/108/3
+usemtl retroTexturePack/PIPES_2A
+f  216/108/4  212/107/4  211/106/4  213/105/4
+usemtl retroTexturePack/PIPES_2A
+f  215/247/5  209/248/5  212/249/5  216/250/5
+usemtl retroTexturePack/PIPES_2A
+f  216/263/6  213/262/6  214/261/6  215/260/6
+
+o entity0_brush27
+usemtl retroTexturePack/PIPES_2A
+f  217/268/1  218/160/1  219/269/1  220/270/1
+usemtl retroTexturePack/PIPES_2A
+f  221/264/2  219/265/2  218/266/2  222/267/2
+usemtl retroTexturePack/PIPES_2A
+f  222/93/3  218/94/3  217/95/3  223/96/3
+usemtl retroTexturePack/PIPES_2A
+f  224/96/4  220/95/4  219/94/4  221/93/4
+usemtl retroTexturePack/PIPES_2A
+f  223/247/5  217/248/5  220/249/5  224/250/5
+usemtl retroTexturePack/PIPES_2A
+f  224/270/6  221/269/6  222/160/6  223/268/6
+
+o entity0_brush28
+usemtl retroTexturePack/PIPES_2A
+f  225/152/1  226/244/1  227/245/1  228/246/1
+usemtl retroTexturePack/PIPES_2A
+f  229/208/2  227/221/2  226/219/2  230/193/2
+usemtl retroTexturePack/PIPES_2A
+f  230/64/3  226/80/3  225/4/3  231/60/3
+usemtl retroTexturePack/PIPES_2A
+f  232/60/4  228/4/4  227/80/4  229/64/4
+usemtl retroTexturePack/PIPES_2A
+f  231/193/5  225/219/5  228/221/5  232/208/5
+usemtl retroTexturePack/PIPES_2A
+f  232/47/6  229/271/6  230/246/6  231/272/6
+

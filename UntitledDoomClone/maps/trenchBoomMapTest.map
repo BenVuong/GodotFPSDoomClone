@@ -1,0 +1,268 @@
+// Game: Qodot
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures/retroTexturePack"
+// brush 0
+{
+( -96 -112 16 ) ( -96 -111 16 ) ( -96 -112 17 ) retroTexturePack/FLOOR_1A 0 0 0 1 1
+( -96 -112 16 ) ( -96 -112 17 ) ( -95 -112 16 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( -96 -112 16 ) ( -95 -112 16 ) ( -96 -111 16 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( 128 128 32 ) ( 128 129 32 ) ( 129 128 32 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( 128 128 32 ) ( 129 128 32 ) ( 128 128 33 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( 128 128 32 ) ( 128 128 33 ) ( 128 129 32 ) retroTexturePack/FLOOR_1A 0 0 0 1 1
+}
+// brush 1
+{
+( -96 -96 -32 ) ( -96 -96 -31 ) ( -96 -97 -32 ) retroTexturePack/TECH_0A 32 48 90 1 1
+( 160 -112 96 ) ( 160 -112 97 ) ( 161 -112 96 ) retroTexturePack/TECH_0A 16 -32 0 1 1
+( -96 -112 32 ) ( 160 -112 32 ) ( 160 16 32 ) retroTexturePack/TECH_0A 16 48 0 1 -1
+( 160 -112 96 ) ( 161 -112 96 ) ( 160 -113 96 ) retroTexturePack/TECH_0A 16 48 0 1 -1
+( -96 -96 -32 ) ( -95 -96 -32 ) ( -96 -96 -31 ) retroTexturePack/TECH_0A 16 -32 0 1 1
+( 128 -112 96 ) ( 128 16 32 ) ( 128 -112 32 ) retroTexturePack/TECH_0A 0 16 0 1 1
+}
+// brush 2
+{
+( -96 128 96 ) ( -96 -96 96 ) ( -96 -96 32 ) retroTexturePack/TECH_0A 16 -32 0 1 1
+( -96 -96 96 ) ( -80 -96 96 ) ( -80 -96 32 ) retroTexturePack/TECH_0A 32 -16 90 1 -1
+( -80 -96 32 ) ( -80 128 32 ) ( -96 128 32 ) retroTexturePack/TECH_0A 16 -16 90 1 -1
+( -96 128 96 ) ( -80 128 96 ) ( -80 -96 96 ) retroTexturePack/TECH_0A 16 -16 90 1 -1
+( -80 128 32 ) ( -80 128 96 ) ( -96 128 96 ) retroTexturePack/TECH_0A 0 16 180 1 -1
+( -80 -96 96 ) ( -80 128 96 ) ( -80 128 32 ) retroTexturePack/TECH_0A 16 -32 0 1 1
+}
+// brush 3
+{
+( 112 -96 -32 ) ( 112 -95 -32 ) ( 112 -96 -31 ) retroTexturePack/TECH_0A -48 -32 0 1 1
+( 112 32 96 ) ( 240 32 32 ) ( 112 32 32 ) retroTexturePack/TECH_0A 32 0 90 1 -1
+( 128 -96 32 ) ( 128 160 32 ) ( 0 160 32 ) retroTexturePack/TECH_0A -48 0 90 1 -1
+( 128 160 96 ) ( 128 161 96 ) ( 129 160 96 ) retroTexturePack/TECH_0A -48 0 90 1 -1
+( 128 128 96 ) ( 0 128 32 ) ( 128 128 32 ) retroTexturePack/TECH_0A 16 16 180 1 -1
+( 128 160 96 ) ( 128 160 97 ) ( 128 161 96 ) retroTexturePack/TECH_0A -48 -32 0 1 1
+}
+// brush 4
+{
+( 112 -240 -32 ) ( 112 -239 -32 ) ( 112 -240 -31 ) retroTexturePack/TECH_0A 32 -32 0 1 1
+( 112 -112 96 ) ( 240 -112 32 ) ( 112 -112 32 ) retroTexturePack/TECH_0A 32 0 0 1 -1
+( 128 -240 32 ) ( 128 16 32 ) ( 0 16 32 ) retroTexturePack/TECH_0A 32 0 90 1 -1
+( 128 16 96 ) ( 128 17 96 ) ( 129 16 96 ) retroTexturePack/TECH_0A 32 0 90 1 -1
+( 128 -16 96 ) ( 0 -16 32 ) ( 128 -16 32 ) retroTexturePack/TECH_0A 16 16 180 1 -1
+( 128 16 96 ) ( 128 16 97 ) ( 128 17 96 ) retroTexturePack/TECH_0A 32 -32 0 1 1
+}
+// brush 5
+{
+( 128 32 32 ) ( 128 -16 32 ) ( 128 -16 16 ) retroTexturePack/FLOOR_1A 0 0 0 1 1
+( 128 -16 32 ) ( 400 -16 32 ) ( 400 -16 16 ) retroTexturePack/FLOOR_1A 16 0 0 1 1
+( 400 -16 16 ) ( 400 32 16 ) ( 128 32 16 ) retroTexturePack/FLOOR_1A 16 0 0 1 1
+( 128 32 32 ) ( 400 32 32 ) ( 400 -16 32 ) retroTexturePack/FLOOR_1A 16 0 0 1 1
+( 400 32 16 ) ( 400 32 32 ) ( 128 32 32 ) retroTexturePack/FLOOR_1A 16 0 0 1 1
+( 400 -16 32 ) ( 400 32 32 ) ( 400 32 16 ) retroTexturePack/FLOOR_1A 48 -16 0 1 1
+}
+// brush 6
+{
+( 128 48 96 ) ( 128 32 96 ) ( 128 32 32 ) retroTexturePack/TECH_0A 32 32 90 1 1
+( 128 32 96 ) ( 400 32 96 ) ( 400 32 32 ) retroTexturePack/TECH_0A -16 -32 0 1 1
+( 400 32 32 ) ( 400 48 32 ) ( 128 48 32 ) retroTexturePack/TECH_0A -16 32 0 1 -1
+( 128 48 96 ) ( 400 48 96 ) ( 400 32 96 ) retroTexturePack/TECH_0A -16 32 0 1 -1
+( 400 48 32 ) ( 400 48 96 ) ( 128 48 96 ) retroTexturePack/TECH_0A -16 -32 0 1 1
+( 400 32 96 ) ( 400 48 96 ) ( 400 48 32 ) retroTexturePack/TECH_0A 32 32 90 1 1
+}
+// brush 7
+{
+( 128 -16 96 ) ( 128 -32 96 ) ( 128 -32 32 ) retroTexturePack/TECH_0A 32 32 90 1 1
+( 128 -32 96 ) ( 448 -32 96 ) ( 448 -32 32 ) retroTexturePack/TECH_0A -16 -32 0 1 1
+( 448 -32 32 ) ( 448 -16 32 ) ( 128 -16 32 ) retroTexturePack/TECH_0A -16 32 0 1 -1
+( 128 -16 96 ) ( 448 -16 96 ) ( 448 -32 96 ) retroTexturePack/TECH_0A -16 32 0 1 -1
+( 448 -16 32 ) ( 448 -16 96 ) ( 128 -16 96 ) retroTexturePack/TECH_0A -16 -32 0 1 1
+( 448 -32 96 ) ( 448 -16 96 ) ( 448 -16 32 ) retroTexturePack/TECH_0A 32 32 90 1 1
+}
+// brush 8
+{
+( 400 256 16 ) ( 400 256 32 ) ( 400 -16 32 ) retroTexturePack/FLOOR_1A -32 0 0 1 1
+( 400 -16 32 ) ( 448 -16 32 ) ( 448 -16 16 ) retroTexturePack/FLOOR_1A -16 0 180 1 -1
+( 448 256 16 ) ( 400 256 16 ) ( 400 -16 16 ) retroTexturePack/FLOOR_1A -32 16 90 1 1
+( 400 -16 32 ) ( 400 256 32 ) ( 448 256 32 ) retroTexturePack/FLOOR_1A -32 16 90 1 1
+( 448 256 32 ) ( 400 256 32 ) ( 400 256 16 ) retroTexturePack/FLOOR_1A -32 -16 180 1 -1
+( 448 -16 32 ) ( 448 256 32 ) ( 448 256 16 ) retroTexturePack/FLOOR_1A -32 0 0 1 1
+}
+// brush 9
+{
+( 400 528 16 ) ( 400 528 32 ) ( 400 256 32 ) retroTexturePack/FLOOR_1A 16 0 0 1 1
+( 400 256 32 ) ( 448 256 32 ) ( 448 256 16 ) retroTexturePack/FLOOR_1A -16 0 180 1 -1
+( 448 528 16 ) ( 400 528 16 ) ( 400 256 16 ) retroTexturePack/FLOOR_1A 16 16 90 1 1
+( 400 256 32 ) ( 400 528 32 ) ( 448 528 32 ) retroTexturePack/FLOOR_1A 16 16 90 1 1
+( 448 528 32 ) ( 400 528 32 ) ( 400 528 16 ) retroTexturePack/FLOOR_1A -32 -16 180 1 -1
+( 448 256 32 ) ( 448 528 32 ) ( 448 528 16 ) retroTexturePack/FLOOR_1A 16 0 0 1 1
+}
+// brush 10
+{
+( 128 528 32 ) ( 128 480 32 ) ( 128 480 16 ) retroTexturePack/FLOOR_1A 48 -16 180 1 -1
+( 128 480 16 ) ( 128 480 32 ) ( 400 480 32 ) retroTexturePack/FLOOR_1A -32 0 180 1 -1
+( 128 528 16 ) ( 128 480 16 ) ( 400 480 16 ) retroTexturePack/FLOOR_1A -32 0 180 1 1
+( 400 480 32 ) ( 128 480 32 ) ( 128 528 32 ) retroTexturePack/FLOOR_1A -32 0 180 1 1
+( 400 528 32 ) ( 128 528 32 ) ( 128 528 16 ) retroTexturePack/FLOOR_1A -32 0 180 1 -1
+( 400 480 32 ) ( 400 528 32 ) ( 400 528 16 ) retroTexturePack/FLOOR_1A 0 0 180 1 -1
+}
+// brush 11
+{
+( 16 528 32 ) ( 16 480 32 ) ( 16 480 16 ) retroTexturePack/FLOOR_1A 48 -16 180 1 -1
+( 16 480 32 ) ( 128 480 32 ) ( 128 480 16 ) retroTexturePack/FLOOR_1A -48 0 180 1 -1
+( 128 480 16 ) ( 128 528 16 ) ( 16 528 16 ) retroTexturePack/FLOOR_1A -48 0 180 1 1
+( 16 528 32 ) ( 128 528 32 ) ( 128 480 32 ) retroTexturePack/FLOOR_1A -48 0 180 1 1
+( 128 528 16 ) ( 128 528 32 ) ( 16 528 32 ) retroTexturePack/FLOOR_1A -48 0 180 1 -1
+( 128 480 32 ) ( 128 528 32 ) ( 128 528 16 ) retroTexturePack/FLOOR_1A 0 0 180 1 -1
+}
+// brush 12
+{
+( 16 480 32 ) ( 16 128 32 ) ( 16 128 16 ) retroTexturePack/FLOOR_1A -16 0 180 1 -1
+( 16 128 32 ) ( 64 128 32 ) ( 64 128 16 ) retroTexturePack/FLOOR_1A -48 -16 0 1 1
+( 64 128 16 ) ( 64 480 16 ) ( 16 480 16 ) retroTexturePack/FLOOR_1A -16 32 270 1 1
+( 16 480 32 ) ( 64 480 32 ) ( 64 128 32 ) retroTexturePack/FLOOR_1A -16 32 270 1 1
+( 64 480 16 ) ( 64 480 32 ) ( 16 480 32 ) retroTexturePack/FLOOR_1A -32 0 0 1 1
+( 64 128 32 ) ( 64 480 32 ) ( 64 480 16 ) retroTexturePack/FLOOR_1A -16 0 180 1 -1
+}
+// brush 13
+{
+( 80 144 96 ) ( 80 128 96 ) ( 80 128 32 ) retroTexturePack/TECH_0A 32 0 90 1 1
+( 80 128 96 ) ( 128 128 96 ) ( 128 128 32 ) retroTexturePack/TECH_0A 0 -32 0 1 1
+( 128 128 32 ) ( 128 144 32 ) ( 80 144 32 ) retroTexturePack/TECH_0A 0 0 0 1 -1
+( 80 144 96 ) ( 128 144 96 ) ( 128 128 96 ) retroTexturePack/TECH_0A 0 0 0 1 -1
+( 128 144 32 ) ( 128 144 96 ) ( 80 144 96 ) retroTexturePack/TECH_0A 0 -32 0 1 1
+( 128 128 96 ) ( 128 144 96 ) ( 128 144 32 ) retroTexturePack/TECH_0A 32 0 90 1 1
+}
+// brush 14
+{
+( 0 528 96 ) ( 0 128 96 ) ( 0 128 32 ) retroTexturePack/TECH_0A -32 -32 0 1 1
+( 0 128 96 ) ( 16 128 96 ) ( 16 128 32 ) retroTexturePack/TECH_0A 32 16 90 1 -1
+( 16 128 32 ) ( 16 528 32 ) ( 0 528 32 ) retroTexturePack/TECH_0A -32 16 90 1 -1
+( 0 528 96 ) ( 16 528 96 ) ( 16 128 96 ) retroTexturePack/TECH_0A -32 16 90 1 -1
+( 16 528 32 ) ( 16 528 96 ) ( 0 528 96 ) retroTexturePack/TECH_0A 32 16 180 1 -1
+( 16 128 96 ) ( 16 528 96 ) ( 16 528 32 ) retroTexturePack/TECH_0A -32 -32 0 1 1
+}
+// brush 15
+{
+( 64 480 96 ) ( 64 128 96 ) ( 64 128 32 ) retroTexturePack/TECH_0A -32 -32 0 1 1
+( 64 128 96 ) ( 80 128 96 ) ( 80 128 32 ) retroTexturePack/TECH_0A 32 16 90 1 -1
+( 80 128 32 ) ( 80 480 32 ) ( 64 480 32 ) retroTexturePack/TECH_0A -32 16 90 1 -1
+( 64 480 96 ) ( 80 480 96 ) ( 80 128 96 ) retroTexturePack/TECH_0A -32 16 90 1 -1
+( 80 480 32 ) ( 80 480 96 ) ( 64 480 96 ) retroTexturePack/TECH_0A 32 16 180 1 -1
+( 80 128 96 ) ( 80 480 96 ) ( 80 480 32 ) retroTexturePack/TECH_0A -32 -32 0 1 1
+}
+// brush 16
+{
+( 0 544 96 ) ( 0 528 96 ) ( 0 528 32 ) retroTexturePack/TECH_0A -16 16 180 1 -1
+( 0 528 96 ) ( 448 528 96 ) ( 448 528 32 ) retroTexturePack/TECH_0A 48 -32 180 1 -1
+( 448 528 32 ) ( 448 544 32 ) ( 0 544 32 ) retroTexturePack/TECH_0A 48 -32 180 1 -1
+( 0 544 96 ) ( 448 544 96 ) ( 448 528 96 ) retroTexturePack/TECH_0A 48 -32 180 1 -1
+( 448 544 32 ) ( 448 544 96 ) ( 0 544 96 ) retroTexturePack/TECH_0A 48 -32 180 1 -1
+( 448 528 96 ) ( 448 544 96 ) ( 448 544 32 ) retroTexturePack/TECH_0A 32 -32 90 1 -1
+}
+// brush 17
+{
+( 80 480 96 ) ( 80 464 96 ) ( 80 464 32 ) retroTexturePack/TECH_0A -16 16 180 1 -1
+( 80 464 96 ) ( 400 464 96 ) ( 400 464 32 ) retroTexturePack/TECH_0A 16 -32 180 1 -1
+( 400 464 32 ) ( 400 480 32 ) ( 80 480 32 ) retroTexturePack/TECH_0A 16 -32 180 1 -1
+( 80 480 96 ) ( 400 480 96 ) ( 400 464 96 ) retroTexturePack/TECH_0A 16 -32 180 1 -1
+( 400 480 32 ) ( 400 480 96 ) ( 80 480 96 ) retroTexturePack/TECH_0A 16 -32 180 1 -1
+( 400 464 96 ) ( 400 480 96 ) ( 400 480 32 ) retroTexturePack/TECH_0A 32 -32 90 1 -1
+}
+// brush 18
+{
+( 448 544 96 ) ( 448 -32 96 ) ( 448 -32 32 ) retroTexturePack/TECH_0A -48 -32 180 1 -1
+( 448 -32 96 ) ( 464 -32 96 ) ( 464 -32 32 ) retroTexturePack/TECH_0A -48 16 0 1 1
+( 464 -32 32 ) ( 464 544 32 ) ( 448 544 32 ) retroTexturePack/TECH_0A -48 0 270 1 -1
+( 448 544 96 ) ( 464 544 96 ) ( 464 -32 96 ) retroTexturePack/TECH_0A -48 0 270 1 -1
+( 464 544 32 ) ( 464 544 96 ) ( 448 544 96 ) retroTexturePack/TECH_0A 32 0 90 1 1
+( 464 -32 96 ) ( 464 544 96 ) ( 464 544 32 ) retroTexturePack/TECH_0A -48 -32 180 1 -1
+}
+// brush 19
+{
+( 384 464 96 ) ( 384 48 96 ) ( 384 48 32 ) retroTexturePack/TECH_0A -48 -32 180 1 -1
+( 384 48 96 ) ( 400 48 96 ) ( 400 48 32 ) retroTexturePack/TECH_0A 16 0 0 1 1
+( 400 48 32 ) ( 400 464 32 ) ( 384 464 32 ) retroTexturePack/TECH_0A -48 0 270 1 -1
+( 384 464 96 ) ( 400 464 96 ) ( 400 48 96 ) retroTexturePack/TECH_0A -48 0 270 1 -1
+( 400 464 32 ) ( 400 464 96 ) ( 384 464 96 ) retroTexturePack/TECH_0A 32 0 90 1 1
+( 400 48 96 ) ( 400 464 96 ) ( 400 464 32 ) retroTexturePack/TECH_0A -48 -32 180 1 -1
+}
+// brush 20
+{
+( -80 128 112 ) ( -80 -96 112 ) ( -80 -96 96 ) retroTexturePack/LIGHT_1B 0 16 0 1 1
+( -80 -96 112 ) ( 112 -96 112 ) ( 112 -96 96 ) retroTexturePack/LIGHT_1B 48 16 0 1 1
+( 112 -96 96 ) ( 112 128 96 ) ( -80 128 96 ) retroTexturePack/LIGHT_1B 48 0 0 1 1
+( -80 128 112 ) ( 112 128 112 ) ( 112 -96 112 ) retroTexturePack/LIGHT_1B 48 0 0 1 1
+( 112 128 96 ) ( 112 128 112 ) ( -80 128 112 ) retroTexturePack/LIGHT_1B 48 16 0 1 1
+( 112 -96 112 ) ( 112 128 112 ) ( 112 128 96 ) retroTexturePack/LIGHT_1B 48 32 0 1 1
+}
+// brush 21
+{
+( -80 144 96 ) ( -80 128 96 ) ( -80 128 32 ) retroTexturePack/TECH_0A 16 16 0 1 1
+( -80 128 96 ) ( 0 128 96 ) ( 0 128 32 ) retroTexturePack/TECH_0A 32 -32 0 1 1
+( 0 128 32 ) ( 0 144 32 ) ( -80 144 32 ) retroTexturePack/TECH_0A 32 0 0 1 -1
+( -80 144 96 ) ( 0 144 96 ) ( 0 128 96 ) retroTexturePack/TECH_0A 32 0 0 1 -1
+( 0 144 32 ) ( 0 144 96 ) ( -80 144 96 ) retroTexturePack/TECH_0A 32 -32 0 1 1
+( 0 128 96 ) ( 0 144 96 ) ( 0 144 32 ) retroTexturePack/TECH_0A 32 0 90 1 1
+}
+// brush 22
+{
+( -96 -112 16 ) ( -96 -111 16 ) ( -96 -112 17 ) retroTexturePack/FLOOR_1A 0 0 0 1 1
+( -96 -112 16 ) ( -96 -112 17 ) ( -95 -112 16 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( -96 -112 16 ) ( -95 -112 16 ) ( -96 -111 16 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( 128 128 32 ) ( 128 129 32 ) ( 129 128 32 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( 128 128 32 ) ( 129 128 32 ) ( 128 128 33 ) retroTexturePack/FLOOR_1A 48 0 0 1 1
+( 128 128 32 ) ( 128 128 33 ) ( 128 129 32 ) retroTexturePack/FLOOR_1A 0 0 0 1 1
+}
+// brush 23
+{
+( 16 480 112 ) ( 16 128 112 ) ( 16 128 96 ) retroTexturePack/PIPES_2A -16 16 180 1 -1
+( 16 128 112 ) ( 64 128 112 ) ( 64 128 96 ) retroTexturePack/PIPES_2A -48 0 0 1 1
+( 64 128 96 ) ( 64 480 96 ) ( 16 480 96 ) retroTexturePack/PIPES_2A -16 32 270 1 1
+( 16 480 112 ) ( 64 480 112 ) ( 64 128 112 ) retroTexturePack/PIPES_2A -16 32 270 1 1
+( 64 480 96 ) ( 64 480 112 ) ( 16 480 112 ) retroTexturePack/PIPES_2A -32 16 0 1 1
+( 64 128 112 ) ( 64 480 112 ) ( 64 480 96 ) retroTexturePack/PIPES_2A -16 16 180 1 -1
+}
+// brush 24
+{
+( 128 528 112 ) ( 128 480 112 ) ( 128 480 96 ) retroTexturePack/PIPES_2A 48 0 180 1 -1
+( 128 480 96 ) ( 128 480 112 ) ( 400 480 112 ) retroTexturePack/PIPES_2A -32 16 180 1 -1
+( 128 528 96 ) ( 128 480 96 ) ( 400 480 96 ) retroTexturePack/PIPES_2A -32 0 180 1 1
+( 400 480 112 ) ( 128 480 112 ) ( 128 528 112 ) retroTexturePack/PIPES_2A -32 0 180 1 1
+( 400 528 112 ) ( 128 528 112 ) ( 128 528 96 ) retroTexturePack/PIPES_2A -32 16 180 1 -1
+( 400 480 112 ) ( 400 528 112 ) ( 400 528 96 ) retroTexturePack/PIPES_2A 0 16 180 1 -1
+}
+// brush 25
+{
+( 16 528 112 ) ( 16 480 112 ) ( 16 480 96 ) retroTexturePack/PIPES_2A 48 0 180 1 -1
+( 16 480 112 ) ( 128 480 112 ) ( 128 480 96 ) retroTexturePack/PIPES_2A -48 16 180 1 -1
+( 128 480 96 ) ( 128 528 96 ) ( 16 528 96 ) retroTexturePack/PIPES_2A -48 0 180 1 1
+( 16 528 112 ) ( 128 528 112 ) ( 128 480 112 ) retroTexturePack/PIPES_2A -48 0 180 1 1
+( 128 528 96 ) ( 128 528 112 ) ( 16 528 112 ) retroTexturePack/PIPES_2A -48 16 180 1 -1
+( 128 480 112 ) ( 128 528 112 ) ( 128 528 96 ) retroTexturePack/PIPES_2A 0 16 180 1 -1
+}
+// brush 26
+{
+( 400 528 96 ) ( 400 528 112 ) ( 400 256 112 ) retroTexturePack/PIPES_2A 16 16 0 1 1
+( 400 256 112 ) ( 448 256 112 ) ( 448 256 96 ) retroTexturePack/PIPES_2A -16 16 180 1 -1
+( 448 528 96 ) ( 400 528 96 ) ( 400 256 96 ) retroTexturePack/PIPES_2A 16 16 90 1 1
+( 400 256 112 ) ( 400 528 112 ) ( 448 528 112 ) retroTexturePack/PIPES_2A 16 16 90 1 1
+( 448 528 112 ) ( 400 528 112 ) ( 400 528 96 ) retroTexturePack/PIPES_2A -32 0 180 1 -1
+( 448 256 112 ) ( 448 528 112 ) ( 448 528 96 ) retroTexturePack/PIPES_2A 16 16 0 1 1
+}
+// brush 27
+{
+( 400 256 96 ) ( 400 256 112 ) ( 400 -16 112 ) retroTexturePack/PIPES_2A -32 16 0 1 1
+( 400 -16 112 ) ( 448 -16 112 ) ( 448 -16 96 ) retroTexturePack/PIPES_2A -16 16 180 1 -1
+( 448 256 96 ) ( 400 256 96 ) ( 400 -16 96 ) retroTexturePack/PIPES_2A -32 16 90 1 1
+( 400 -16 112 ) ( 400 256 112 ) ( 448 256 112 ) retroTexturePack/PIPES_2A -32 16 90 1 1
+( 448 256 112 ) ( 400 256 112 ) ( 400 256 96 ) retroTexturePack/PIPES_2A -32 0 180 1 -1
+( 448 -16 112 ) ( 448 256 112 ) ( 448 256 96 ) retroTexturePack/PIPES_2A -32 16 0 1 1
+}
+// brush 28
+{
+( 112 32 112 ) ( 112 -16 112 ) ( 112 -16 96 ) retroTexturePack/PIPES_2A 0 16 0 1 1
+( 112 -16 112 ) ( 400 -16 112 ) ( 400 -16 96 ) retroTexturePack/PIPES_2A 16 16 0 1 1
+( 400 -16 96 ) ( 400 32 96 ) ( 112 32 96 ) retroTexturePack/PIPES_2A 16 0 0 1 1
+( 112 32 112 ) ( 400 32 112 ) ( 400 -16 112 ) retroTexturePack/PIPES_2A 16 0 0 1 1
+( 400 32 96 ) ( 400 32 112 ) ( 112 32 112 ) retroTexturePack/PIPES_2A 16 16 0 1 1
+( 400 -16 112 ) ( 400 32 112 ) ( 400 32 96 ) retroTexturePack/PIPES_2A 48 0 0 1 1
+}
+}

@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://bux3bls4tp5i2"
+path="res://.godot/imported/trenchBoomMapTest.1.map-3d19385df94c736299b2976459d057c4.tres"
+
+[deps]
+
+source_file="res://maps/autosave/trenchBoomMapTest.1.map"
+dest_files=["res://.godot/imported/trenchBoomMapTest.1.map-3d19385df94c736299b2976459d057c4.tres"]
+
+[params]
+

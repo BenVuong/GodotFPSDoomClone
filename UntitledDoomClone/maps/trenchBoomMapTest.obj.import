@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvaohuwhmhqwd"
+path="res://.godot/imported/trenchBoomMapTest.obj-26eeab9d0d3391a6efeae00edd6db9f6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trenchBoomMapTest.obj-26eeab9d0d3391a6efeae00edd6db9f6.mesh"]
+
+source_file="res://maps/trenchBoomMapTest.obj"
+dest_files=["res://.godot/imported/trenchBoomMapTest.obj-26eeab9d0d3391a6efeae00edd6db9f6.mesh", "res://.godot/imported/trenchBoomMapTest.obj-26eeab9d0d3391a6efeae00edd6db9f6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

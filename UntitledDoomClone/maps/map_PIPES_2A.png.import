@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d14wma8s3ay8h"
-path.s3tc="res://.godot/imported/TECH_0A.png-e2ce06f1486308e6fc1e199c325daabd.s3tc.ctex"
+uid="uid://d2n1gnchh37y8"
+path.s3tc="res://.godot/imported/map_PIPES_2A.png-077a6ed59978875e59c7f143eab7af83.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://maps/textures/retroTexturePack/TECH_0A.png"
-dest_files=["res://.godot/imported/TECH_0A.png-e2ce06f1486308e6fc1e199c325daabd.s3tc.ctex"]
+source_file="res://maps/map_PIPES_2A.png"
+dest_files=["res://.godot/imported/map_PIPES_2A.png-077a6ed59978875e59c7f143eab7af83.s3tc.ctex"]
 
 [params]
 

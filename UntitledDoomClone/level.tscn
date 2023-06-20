@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=13 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Texture2D" uid="uid://dyos55ixoatn7" path="res://textures/STEEL_1A.png" id="1_wmm57"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
 [ext_resource type="PackedScene" uid="uid://ddtpe3rawg5i4" path="res://test_level_textured.tscn" id="3_70xdc"]
+[ext_resource type="PackedScene" uid="uid://b8gomniy4e6pr" path="res://map.tscn" id="4_smqhs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -59,10 +60,10 @@ mesh = SubResource("PlaneMesh_fy7je")
 shape = SubResource("ConcavePolygonShape3D_uw7td")
 
 [node name="Player" parent="." instance=ExtResource("2_uhani")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0394862, 1.02787, 0.135776)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8862, 2.39093, 1.57886)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["enemy"]]
-transform = Transform3D(2.085, 0, 0, 0, 3.113, 0, 0, 0, 0.174, 0, 0.596, 6.026)
+transform = Transform3D(0.0227914, 4.08477, 0.0941453, 0, 2.28318, -0.168474, -1.45082, 0.064169, 0.00147896, 12.3491, 1.87117, 1.38144)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_a8qjl")
@@ -72,3 +73,6 @@ mesh = SubResource("BoxMesh_k1pex")
 
 [node name="testLevelTextured" parent="." instance=ExtResource("3_70xdc")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0137601, 0.004, -0.316107)
+
+[node name="map" parent="." instance=ExtResource("4_smqhs")]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 17.745, 0.0740124, 1.91692)
