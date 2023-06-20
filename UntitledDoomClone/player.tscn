@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b40v61neclsf8"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_14jfr"]
+[ext_resource type="PackedScene" uid="uid://dvseu77pkl0fr" path="res://scenes/guns/Uzi.tscn" id="2_6d5bd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ytiq0"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_14jfr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ytiq0")
+
+[node name="pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508492, 0)
+
+[node name="gun" type="Node3D" parent="pivot"]
+
+[node name="uzi" parent="pivot/gun" instance=ExtResource("2_6d5bd")]
+
+[node name="camera" type="Camera3D" parent="pivot"]

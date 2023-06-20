@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://rerw62s2suhi"]
+
+[ext_resource type="Script" path="res://Gun.gd" id="1_rjb0y"]
+[ext_resource type="Texture2D" uid="uid://bfpq87o5jh7du" path="res://textures/pistol/2pisa0.png" id="2_mvm7h"]
+[ext_resource type="Texture2D" uid="uid://778rjvk34i25" path="res://textures/pistol/2pisb0.png" id="3_j700d"]
+[ext_resource type="Texture2D" uid="uid://d3wmrg4rreqgv" path="res://textures/pistol/2pisd0.png" id="4_4gnrw"]
+[ext_resource type="Texture2D" uid="uid://de2k7cvyigvch" path="res://textures/pistol/2pisf0.png" id="5_kndkj"]
+[ext_resource type="Texture2D" uid="uid://cqcrbi50u061" path="res://textures/pistol/2pisc0.png" id="6_tr6pw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mvm7h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j700d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4gnrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kndkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tr6pw")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="pistol" type="Node3D"]
+script = ExtResource("1_rjb0y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="gunsprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+position = Vector2(-125, 39.638)
+rotation = 3.14159
+scale = Vector2(3.38202, 3.65294)
+sprite_frames = SubResource("SpriteFrames_3liy7")
+animation = &"shoot"
+frame = 3
+frame_progress = 1.0
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="ray" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="ray"]
+target_position = Vector3(0, 0, -20)

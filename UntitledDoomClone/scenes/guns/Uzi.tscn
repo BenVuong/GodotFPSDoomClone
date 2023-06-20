@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvseu77pkl0fr"]
+
+[ext_resource type="Script" path="res://Gun.gd" id="1_1sgf1"]
+[ext_resource type="Texture2D" uid="uid://cyhs7myyiqgwx" path="res://textures/uzi/uziga0.png" id="2_5b4mu"]
+[ext_resource type="Texture2D" uid="uid://b585fs5bg4e4l" path="res://textures/uzi/uzigb0.png" id="3_x5hbv"]
+[ext_resource type="Texture2D" uid="uid://bhdwfhcfq4pwk" path="res://textures/uzi/uzigc0.png" id="4_73nb3"]
+[ext_resource type="AudioStream" uid="uid://bskfs0gatosyt" path="res://sound/uzifir.ogg" id="5_1ddlf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5b4mu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x5hbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73nb3")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="uzi" type="Node3D"]
+script = ExtResource("1_1sgf1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1ddlf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="gunsprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+position = Vector2(-125, 55.638)
+rotation = 3.14159
+scale = Vector2(3.38202, 3.65294)
+sprite_frames = SubResource("SpriteFrames_3liy7")
+animation = &"shoot"
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="ray" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="ray"]
+target_position = Vector3(0, 0, -20)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
