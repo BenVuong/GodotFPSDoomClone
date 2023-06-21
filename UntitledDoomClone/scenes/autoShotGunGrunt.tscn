@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxexmhhu17xkh"]
+[gd_scene load_steps=21 format=3 uid="uid://dxexmhhu17xkh"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_ed6nv"]
 [ext_resource type="Texture2D" uid="uid://1uja8artq4aj" path="res://textures/enemy/autoshotgunGuy/sprites/asgzg1.png" id="2_p2c3c"]
@@ -55,12 +55,23 @@ animations = [{
 "name": &"die",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"gone",
+"speed": 5.0
+}, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ru5p3")
+}, {
 "duration": 1.0,
 "texture": ExtResource("2_p2c3c")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_p2c3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ru5p3")
 }],
 "loop": false,
 "name": &"hit",
@@ -103,6 +114,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mi8aa"]
+radius = 3.0
+
 [node name="autoShotGunGrunt" type="CharacterBody3D" groups=["enemies"]]
 script = ExtResource("1_ed6nv")
 
@@ -117,11 +131,36 @@ shape = SubResource("CapsuleShape3D_ek7cn")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="shootTimer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.795, 0)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_sw0eb")
-animation = &"idle"
+animation = &"shoot"
+frame = 1
+frame_progress = 1.0
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.228268, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_sw0eb")
+animation = &"die"
+frame = 7
+frame_progress = 1.0
+
+[node name="ears" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ears"]
+shape = SubResource("CylinderShape3D_mi8aa")
+
+[node name="eyes" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0)
+
+[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]
+[connection signal="body_exited" from="ears" to="." method="_on_ears_body_exited"]

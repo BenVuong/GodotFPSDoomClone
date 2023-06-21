@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_gm0al"]
 
 [sub_resource type="SystemFont" id="SystemFont_gq45p"]
+subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_i6jls"]
 default_font = SubResource("SystemFont_gq45p")

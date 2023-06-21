@@ -37,3 +37,8 @@ size_flags_vertical = 4
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CenterContainer"]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_i2gco")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_ytiq0")
