@@ -11,11 +11,13 @@ var can_shoot = true
 func _ready():
 	gun_sprite.play("idle")
 
-func check_hit():
+func check_hit(dmg):
 	for ray in gunRay:
 		if ray.is_colliding():
-			if ray.get_collider().is_in_group("enemy"):
+			if ray.get_collider().is_in_group("enemies"):
 				print("hit")
+				print(ray.get_collider().name)
+				ray.get_collider().takeDamage(dmg)
 	
 func make_flash():
 	var f = flash.instantiate()
@@ -26,17 +28,28 @@ func _process(delta):
 		if Input.is_action_pressed("fire") and can_shoot:
 			sound.play()
 			gun_sprite.play("shoot")
-			check_hit()
+			check_hit(2)
 			make_flash()
 			can_shoot = false
 			await $CanvasLayer/Control/gunsprite.animation_finished
 			can_shoot = true
 			gun_sprite.play("idle")
+	
 	elif get_parent().get_child(0).name == "pistol":
 		if Input.is_action_just_pressed("fire") and can_shoot:
 			#sound.play()
 			gun_sprite.play("shoot")
-			check_hit()
+			check_hit(5)
+			make_flash()
+			can_shoot = false
+			await $CanvasLayer/Control/gunsprite.animation_finished
+			can_shoot = true
+			gun_sprite.play("idle")
+	elif get_parent().get_child(0).name == "shotgun":
+		if Input.is_action_just_pressed("fire") and can_shoot:
+			#sound.play()
+			gun_sprite.play("shoot")
+			check_hit(20)
 			make_flash()
 			can_shoot = false
 			await $CanvasLayer/Control/gunsprite.animation_finished

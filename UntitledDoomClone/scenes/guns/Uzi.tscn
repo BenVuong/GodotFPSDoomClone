@@ -49,11 +49,12 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="gunsprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
-position = Vector2(-125, 55.638)
+position = Vector2(-125, 57.638)
 rotation = 3.14159
 scale = Vector2(3.38202, 3.65294)
 sprite_frames = SubResource("SpriteFrames_3liy7")
 animation = &"shoot"
+speed_scale = 3.0
 centered = false
 flip_h = true
 flip_v = true

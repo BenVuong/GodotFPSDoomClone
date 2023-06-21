@@ -1,0 +1,106 @@
+[gd_scene load_steps=11 format=3 uid="uid://peawx6cnt3b4"]
+
+[ext_resource type="Script" path="res://Gun.gd" id="1_vlbrk"]
+[ext_resource type="Texture2D" uid="uid://dgjwangt4o1e4" path="res://textures/shotgun/xstfb0.png" id="2_05k3l"]
+[ext_resource type="Texture2D" uid="uid://shmp2stvhl01" path="res://textures/shotgun/xstfa0.png" id="3_2xohb"]
+[ext_resource type="Texture2D" uid="uid://ccpkqk6atkbcc" path="res://textures/shotgun/xstga0.png" id="4_guhmd"]
+[ext_resource type="Texture2D" uid="uid://dhoaghbae64k1" path="res://textures/shotgun/xstgb0.png" id="5_ngkrt"]
+[ext_resource type="Texture2D" uid="uid://xfsed7i3qh36" path="res://textures/shotgun/xstgc0.png" id="6_jkeqf"]
+[ext_resource type="Texture2D" uid="uid://be23of3cna50i" path="res://textures/shotgun/xstgd0.png" id="7_asuds"]
+[ext_resource type="Texture2D" uid="uid://bww12d32fc0ky" path="res://textures/shotgun/xstge0.png" id="8_lvgg1"]
+[ext_resource type="Texture2D" uid="uid://cqa2nb38pwp7v" path="res://textures/shotgun/xstgf0.png" id="9_707x1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_05k3l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2xohb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2xohb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_05k3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_guhmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ngkrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jkeqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_asuds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lvgg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_707x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_05k3l")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="shotgun" type="Node3D"]
+script = ExtResource("1_vlbrk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="gunsprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+position = Vector2(25, 39.638)
+rotation = 3.14159
+scale = Vector2(3.5, 3.78)
+sprite_frames = SubResource("SpriteFrames_3liy7")
+animation = &"idle"
+speed_scale = 1.25
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="ray" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="ray"]
+target_position = Vector3(0, 0, -20)
+
+[node name="RayCast3D2" type="RayCast3D" parent="ray"]
+transform = Transform3D(0.976296, 0, 0.21644, 0, 1, 0, -0.21644, 0, 0.976296, 0, 0, 0)
+target_position = Vector3(0, 0, -20)
+
+[node name="RayCast3D3" type="RayCast3D" parent="ray"]
+transform = Transform3D(0.993961, 0, 0.109734, 0, 1, 0, -0.109734, 0, 0.993961, 0, 0, 0)
+target_position = Vector3(0, 0, -20)
+
+[node name="RayCast3D4" type="RayCast3D" parent="ray"]
+transform = Transform3D(0.994151, 0, -0.107999, 0, 1, 0, 0.107999, 0, 0.994151, 0, 0, 0)
+target_position = Vector3(0, 0, -20)
+
+[node name="RayCast3D5" type="RayCast3D" parent="ray"]
+transform = Transform3D(0.976296, 0, -0.21644, 0, 1, 0, 0.21644, 0, 0.976296, 0, 0, 0)
+target_position = Vector3(0, 0, -20)

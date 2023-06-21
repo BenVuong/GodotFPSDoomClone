@@ -1,0 +1,127 @@
+[gd_scene load_steps=20 format=3 uid="uid://dxexmhhu17xkh"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_ed6nv"]
+[ext_resource type="Texture2D" uid="uid://1uja8artq4aj" path="res://textures/enemy/autoshotgunGuy/sprites/asgzg1.png" id="2_p2c3c"]
+[ext_resource type="Texture2D" uid="uid://d0a6yvin8yftj" path="res://textures/enemy/autoshotgunGuy/sprites/asgzh0.png" id="3_t7m85"]
+[ext_resource type="Texture2D" uid="uid://bdyhxfom1h0pa" path="res://textures/enemy/autoshotgunGuy/sprites/asgzi0.png" id="4_ojrmf"]
+[ext_resource type="Texture2D" uid="uid://dt73pq35em67g" path="res://textures/enemy/autoshotgunGuy/sprites/asgzj0.png" id="5_6jw7t"]
+[ext_resource type="Texture2D" uid="uid://bvfnxstwxkybi" path="res://textures/enemy/autoshotgunGuy/sprites/asgzk0.png" id="6_ork0v"]
+[ext_resource type="Texture2D" uid="uid://clyq7j3enblja" path="res://textures/enemy/autoshotgunGuy/sprites/asgzl0.png" id="7_r0hji"]
+[ext_resource type="Texture2D" uid="uid://4kveibabjmbn" path="res://textures/enemy/autoshotgunGuy/sprites/asgzm0.png" id="8_4424n"]
+[ext_resource type="Texture2D" uid="uid://b75xduxphig71" path="res://textures/enemy/autoshotgunGuy/sprites/asgzn0.png" id="9_4505l"]
+[ext_resource type="Texture2D" uid="uid://b6sj73swidvi" path="res://textures/enemy/autoshotgunGuy/sprites/asgza1.png" id="10_ru5p3"]
+[ext_resource type="Texture2D" uid="uid://dkvj63db0evjr" path="res://textures/enemy/autoshotgunGuy/sprites/asgze1.png" id="11_8r6om"]
+[ext_resource type="Texture2D" uid="uid://bg4mkmxgimluj" path="res://textures/enemy/autoshotgunGuy/sprites/asgzf1.png" id="12_4wpsk"]
+[ext_resource type="Texture2D" uid="uid://572l53nltkef" path="res://textures/enemy/autoshotgunGuy/sprites/asgzb1.png" id="13_yahjt"]
+[ext_resource type="Texture2D" uid="uid://gpg1wu8e4fwo" path="res://textures/enemy/autoshotgunGuy/sprites/asgzc1.png" id="14_pw024"]
+[ext_resource type="Texture2D" uid="uid://dpar00jjt2rfc" path="res://textures/enemy/autoshotgunGuy/sprites/asgzd1.png" id="15_get0n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qj7l3"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2fdb5"]
+material = SubResource("StandardMaterial3D_qj7l3")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ek7cn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sw0eb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p2c3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t7m85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ojrmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6jw7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ork0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r0hji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4424n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4505l")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p2c3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p2c3c")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ru5p3")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_8r6om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4wpsk")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ru5p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yahjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pw024")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_get0n")
+}],
+"loop": false,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="autoShotGunGrunt" type="CharacterBody3D" groups=["enemies"]]
+script = ExtResource("1_ed6nv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_2fdb5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ek7cn")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.795, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_sw0eb")
+animation = &"idle"

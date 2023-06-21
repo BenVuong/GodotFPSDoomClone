@@ -1,11 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=10 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
-[ext_resource type="Texture2D" uid="uid://dyos55ixoatn7" path="res://textures/STEEL_1A.png" id="1_wmm57"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
-[ext_resource type="PackedScene" uid="uid://ddtpe3rawg5i4" path="res://test_level_textured.tscn" id="3_70xdc"]
 [ext_resource type="PackedScene" uid="uid://b8gomniy4e6pr" path="res://map.tscn" id="4_smqhs"]
-[ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/enemy.tscn" id="6_6wrvt"]
+[ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/autoShotGunGrunt.tscn" id="6_ds2wk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,18 +19,6 @@ tonemap_mode = 2
 glow_enabled = true
 fog_density = 0.0169
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhk1n"]
-albedo_texture = ExtResource("1_wmm57")
-metallic = 0.36
-metallic_specular = 0.85
-uv1_scale = Vector3(25, 25, 25)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_fy7je"]
-material = SubResource("StandardMaterial3D_xhk1n")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uw7td"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_a8qjl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_k1pex"]
@@ -44,29 +30,11 @@ script = ExtResource("1_7j3t3")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mpyct")
 
-[node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -12.2322, 0.0143297, 11.511)
-mesh = SubResource("PlaneMesh_fy7je")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_uw7td")
-
-[node name="ceiling" type="MeshInstance3D" parent="."]
-transform = Transform3D(-20, 3.01992e-06, 0, -3.01992e-06, -20, 0, 0, 0, 20, -12.2319, 2.058, 11.5106)
-mesh = SubResource("PlaneMesh_fy7je")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="ceiling"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_uw7td")
-
 [node name="Player" parent="." instance=ExtResource("2_uhani")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8862, 2.39093, 1.57886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73222, 2.39093, 2.05434)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["enemy"]]
-transform = Transform3D(0.0227914, 4.08477, 0.0941453, 0, 2.28318, -0.168474, -1.45082, 0.064169, 0.00147896, 12.3491, 1.87117, 1.38144)
+transform = Transform3D(0.0227914, 4.08477, 0.0941453, 0, 2.28318, -0.168474, -1.45082, 0.064169, 0.00147896, -4.80488, 1.87117, 1.85692)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_a8qjl")
@@ -74,11 +42,14 @@ shape = SubResource("BoxShape3D_a8qjl")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_k1pex")
 
-[node name="testLevelTextured" parent="." instance=ExtResource("3_70xdc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0137601, 0.004, -0.316107)
-
 [node name="map" parent="." instance=ExtResource("4_smqhs")]
-transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 17.745, 0.0740124, 1.91692)
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0.591024, 0.0740124, 2.3924)
 
-[node name="enemy" parent="." instance=ExtResource("6_6wrvt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9696, 1.36654, -2.69108)
+[node name="autoShotGunGrunt" parent="." instance=ExtResource("6_ds2wk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97872, 1.22601, -11.882)
+
+[node name="autoShotGunGrunt3" parent="." instance=ExtResource("6_ds2wk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.651, 1.62111, 1.813)
+
+[node name="autoShotGunGrunt2" parent="." instance=ExtResource("6_ds2wk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80198, 1.22601, -1.42)

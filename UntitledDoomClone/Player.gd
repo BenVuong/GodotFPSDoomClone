@@ -13,9 +13,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var camera := $pivot/camera
 @onready var pistol = preload("res://scenes/guns/pistol.tscn")
 @onready var uzi = preload("res://scenes/guns/Uzi.tscn")
+@onready var shotgun = preload("res://scenes/guns/shotun.tscn")
 
 var current_gun = 0
-@onready var carriedGuns = [pistol, uzi]
+@onready var carriedGuns = [pistol, uzi, shotgun]
 
 
 
