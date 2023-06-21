@@ -15,6 +15,10 @@ run/main_scene="res://level.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStats="*res://scripts/playerStats.gd"
+
 [display]
 
 window/size/mode=2

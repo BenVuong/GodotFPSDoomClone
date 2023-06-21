@@ -22,7 +22,9 @@ var current_gun = 0
 
 func reloadGame():
 	if Input.is_action_pressed("reloadGame"):
+		
 		get_tree().reload_current_scene()
+		PlayerStats.reset()
 	
 func _process(delta):
 	if Input.is_action_just_pressed("nextGun"):
@@ -41,6 +43,7 @@ func changeGun(gun):
 	$pivot/gun.get_child(0).queue_free()
 	var newGun = carriedGuns[gun].instantiate()
 	$pivot/gun.add_child(newGun)
+	PlayerStats.current_gun = newGun.name
 func _ready():
 	#hand.set_as_toplevel(true)
 	

@@ -25,8 +25,10 @@ func make_flash():
 	
 func _process(delta):
 	if get_parent().get_child(0).name == "uzi":
-		if Input.is_action_pressed("fire") and can_shoot:
+		if Input.is_action_pressed("fire") and can_shoot and PlayerStats.ammo_pistol>0:
 			sound.play()
+			PlayerStats.change_pistol_ammo(-1)
+			print(PlayerStats.get_pistol_ammo())
 			gun_sprite.play("shoot")
 			check_hit(2)
 			make_flash()
@@ -36,8 +38,10 @@ func _process(delta):
 			gun_sprite.play("idle")
 	
 	elif get_parent().get_child(0).name == "pistol":
-		if Input.is_action_just_pressed("fire") and can_shoot:
+		if Input.is_action_just_pressed("fire") and can_shoot and PlayerStats.ammo_pistol>0:
 			#sound.play()
+			PlayerStats.change_pistol_ammo(-1)
+			print(PlayerStats.get_pistol_ammo())
 			gun_sprite.play("shoot")
 			check_hit(5)
 			make_flash()
@@ -46,10 +50,12 @@ func _process(delta):
 			can_shoot = true
 			gun_sprite.play("idle")
 	elif get_parent().get_child(0).name == "shotgun":
-		if Input.is_action_just_pressed("fire") and can_shoot:
+		if Input.is_action_just_pressed("fire") and can_shoot and PlayerStats.ammo_shells>0:
 			#sound.play()
+			PlayerStats.change_shotgun_ammo(-1)
+			print(PlayerStats.get_shotgun_ammo())
 			gun_sprite.play("shoot")
-			check_hit(20)
+			check_hit(10)
 			make_flash()
 			can_shoot = false
 			await $CanvasLayer/Control/gunsprite.animation_finished

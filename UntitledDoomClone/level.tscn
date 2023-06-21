@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=11 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
 [ext_resource type="PackedScene" uid="uid://b8gomniy4e6pr" path="res://map.tscn" id="4_smqhs"]
+[ext_resource type="PackedScene" uid="uid://bj551mbne6mk4" path="res://scenes/hud.tscn" id="5_wnkfy"]
 [ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/autoShotGunGrunt.tscn" id="6_ds2wk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
@@ -49,7 +50,9 @@ transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0.591024, 0.07401
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97872, 1.22601, -11.882)
 
 [node name="autoShotGunGrunt3" parent="." instance=ExtResource("6_ds2wk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.651, 1.62111, 1.813)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.19615, 1.31979, 2.15268)
 
 [node name="autoShotGunGrunt2" parent="." instance=ExtResource("6_ds2wk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80198, 1.22601, -1.42)
+
+[node name="HUD" parent="." instance=ExtResource("5_wnkfy")]

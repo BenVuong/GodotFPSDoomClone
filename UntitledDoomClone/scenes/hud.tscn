@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj551mbne6mk4"]
+
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="1_gm0al"]
+
+[sub_resource type="SystemFont" id="SystemFont_gq45p"]
+
+[sub_resource type="Theme" id="Theme_i6jls"]
+default_font = SubResource("SystemFont_gq45p")
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_gm0al")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_i6jls")
+
+[node name="stats" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="lables" type="VBoxContainer" parent="MarginContainer/stats"]
+layout_mode = 2
+alignment = 2
+
+[node name="armorLabel" type="Label" parent="MarginContainer/stats/lables"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Armor:"
+
+[node name="healthLabel" type="Label" parent="MarginContainer/stats/lables"]
+layout_mode = 2
+text = "Health:
+"
+
+[node name="values" type="VBoxContainer" parent="MarginContainer/stats"]
+layout_mode = 2
+alignment = 2
+
+[node name="armorValue" type="Label" parent="MarginContainer/stats/values"]
+layout_mode = 2
+text = "0
+"
+
+[node name="healthValue" type="Label" parent="MarginContainer/stats/values"]
+layout_mode = 2
+text = "100
+"
+
+[node name="ammo" type="VBoxContainer" parent="MarginContainer/stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="ammoValue" type="Label" parent="MarginContainer/stats/ammo"]
+layout_mode = 2
+text = "0
+"
+horizontal_alignment = 2
