@@ -24,7 +24,7 @@ fog_density = 0.0169
 
 [sub_resource type="BoxMesh" id="BoxMesh_k1pex"]
 
-[node name="Node3D" type="Node3D"]
+[node name="level" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00858426, -0.0740126, -0.0575289)
 script = ExtResource("1_7j3t3")
 
@@ -32,7 +32,7 @@ script = ExtResource("1_7j3t3")
 environment = SubResource("Environment_mpyct")
 
 [node name="Player" parent="." instance=ExtResource("2_uhani")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.132527, 2.33523, 0.687498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.132527, 2.33523, 4.73121)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["enemy"]]
 transform = Transform3D(0.0227914, 4.08477, 0.0941453, 0, 2.28318, -0.168474, -1.45082, 0.064169, 0.00147896, -4.80488, 1.87117, 1.85692)

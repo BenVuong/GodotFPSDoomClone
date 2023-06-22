@@ -68,4 +68,6 @@ target_position = Vector3(0, 0, -20)
 wait_time = 0.2
 autostart = true
 
+[node name="Marker3D" type="Marker3D" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

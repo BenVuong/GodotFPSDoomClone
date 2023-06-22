@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj551mbne6mk4"]
+[gd_scene load_steps=5 format=3 uid="uid://bj551mbne6mk4"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_gm0al"]
+[ext_resource type="FontFile" uid="uid://btioietj17e22" path="res://fonts/Phased.ttf" id="2_qt5f6"]
 
 [sub_resource type="SystemFont" id="SystemFont_gq45p"]
 subpixel_positioning = 0
@@ -30,10 +31,12 @@ alignment = 2
 [node name="armorLabel" type="Label" parent="MarginContainer/stats/lables"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "Armor:"
 
 [node name="healthLabel" type="Label" parent="MarginContainer/stats/lables"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "Health:
 "
 
@@ -43,11 +46,13 @@ alignment = 2
 
 [node name="armorValue" type="Label" parent="MarginContainer/stats/values"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "0
 "
 
 [node name="healthValue" type="Label" parent="MarginContainer/stats/values"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "100
 "
 
@@ -58,6 +63,7 @@ alignment = 2
 
 [node name="ammoValue" type="Label" parent="MarginContainer/stats/ammo"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "0
 "
 horizontal_alignment = 2

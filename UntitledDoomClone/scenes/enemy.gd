@@ -31,7 +31,10 @@ func death():
 	
 	animation.visible = false
 	animation2.visible = true
-	animation2.play("die")
+	if health>-health:
+		animation2.play("die")
+	else:
+		animation2.play("explode")
 func takeDamage(dmg):
 	print("I have been shot")
 	animation.play("hit")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://peawx6cnt3b4"]
+[gd_scene load_steps=12 format=3 uid="uid://peawx6cnt3b4"]
 
 [ext_resource type="Script" path="res://Gun.gd" id="1_vlbrk"]
 [ext_resource type="Texture2D" uid="uid://dgjwangt4o1e4" path="res://textures/shotgun/xstfb0.png" id="2_05k3l"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://be23of3cna50i" path="res://textures/shotgun/xstgd0.png" id="7_asuds"]
 [ext_resource type="Texture2D" uid="uid://bww12d32fc0ky" path="res://textures/shotgun/xstge0.png" id="8_lvgg1"]
 [ext_resource type="Texture2D" uid="uid://cqa2nb38pwp7v" path="res://textures/shotgun/xstgf0.png" id="9_707x1"]
+[ext_resource type="AudioStream" uid="uid://cxc0qeq3ilwgy" path="res://sound/SGFIRE2.ogg" id="10_q6yib"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
 animations = [{
@@ -104,3 +105,9 @@ target_position = Vector3(0, 0, -20)
 [node name="RayCast3D5" type="RayCast3D" parent="ray"]
 transform = Transform3D(0.976296, 0, -0.21644, 0, 1, 0, 0.21644, 0, 0.976296, 0, 0, 0)
 target_position = Vector3(0, 0, -20)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_q6yib")
+volume_db = -5.0
+
+[node name="Marker3D" type="Marker3D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://rerw62s2suhi"]
+[gd_scene load_steps=9 format=3 uid="uid://rerw62s2suhi"]
 
 [ext_resource type="Script" path="res://Gun.gd" id="1_rjb0y"]
 [ext_resource type="Texture2D" uid="uid://bfpq87o5jh7du" path="res://textures/pistol/2pisa0.png" id="2_mvm7h"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d3wmrg4rreqgv" path="res://textures/pistol/2pisd0.png" id="4_4gnrw"]
 [ext_resource type="Texture2D" uid="uid://de2k7cvyigvch" path="res://textures/pistol/2pisf0.png" id="5_kndkj"]
 [ext_resource type="Texture2D" uid="uid://cqcrbi50u061" path="res://textures/pistol/2pisc0.png" id="6_tr6pw"]
+[ext_resource type="AudioStream" uid="uid://bix2kcbwy3vpg" path="res://sound/DSPISTOL.ogg" id="7_y85y0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
 animations = [{
@@ -68,3 +69,9 @@ flip_v = true
 
 [node name="RayCast3D" type="RayCast3D" parent="ray"]
 target_position = Vector3(0, 0, -20)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_y85y0")
+volume_db = -5.0
+
+[node name="Marker3D" type="Marker3D" parent="."]

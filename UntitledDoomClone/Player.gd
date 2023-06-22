@@ -14,10 +14,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pistol = preload("res://scenes/guns/pistol.tscn")
 @onready var uzi = preload("res://scenes/guns/Uzi.tscn")
 @onready var shotgun = preload("res://scenes/guns/shotun.tscn")
+@onready var rpg = preload("res://scenes/guns/rpg.tscn")
 @onready var animation = $AnimationPlayer
 var play = true 
 var current_gun = 0
-@onready var carriedGuns = [pistol, uzi, shotgun]
+@onready var carriedGuns = [pistol, uzi, shotgun, rpg]
 @onready var gun = $pivot/gun
 
 
@@ -29,12 +30,12 @@ func reloadGame():
 		PlayerStats.reset()
 	
 func _process(delta):
-	if Input.is_action_just_pressed("nextGun"):
+	if Input.is_action_just_pressed("nextGun") and PlayerStats.health>0:
 		current_gun+=1
 		if current_gun > len(carriedGuns)-1:
 			current_gun = 0
 		changeGun(current_gun)
-	elif Input.is_action_just_pressed("prevGun"):
+	elif Input.is_action_just_pressed("prevGun")and PlayerStats.health>0:
 		current_gun-=1
 		if current_gun < 0:
 			current_gun = len(carriedGuns)-1
