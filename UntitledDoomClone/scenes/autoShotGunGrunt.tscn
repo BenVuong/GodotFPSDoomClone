@@ -91,6 +91,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_4wpsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8r6om")
 }],
 "loop": false,
 "name": &"shoot",
@@ -132,7 +135,6 @@ shape = SubResource("CapsuleShape3D_ek7cn")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="shootTimer" type="Timer" parent="."]
-wait_time = 2.5
 autostart = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]

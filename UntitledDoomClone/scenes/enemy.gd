@@ -5,6 +5,8 @@ extends CharacterBody3D
 @onready var animation = $AnimatedSprite3D
 @onready var animation2 = $AnimatedSprite3D2
 @onready var eyes = $eyes
+@onready var timer = $shootTimer
+
 var shooting = false
 var dead = false
 var speed = 1
@@ -12,9 +14,13 @@ var health = 20
 var isShot = false
 var searching = false
 var target
+var damage = 10
+var rng = RandomNumberGenerator.new()
 
 func _ready():
 	animation2.visible = false
+	var my_random_number = rng.randf_range(0.5, 2.0)
+	timer.set_wait_time(my_random_number)
 	
 func death():
 	print("I am dead")
@@ -72,10 +78,12 @@ func shoot():
 		await $AnimatedSprite3D.frame_changed
 		if eyes.is_colliding():
 			if eyes.get_collider().is_in_group("Player"):
-				PlayerStats.change_health(-10)
+				PlayerStats.change_health(-damage)
 		await $AnimatedSprite3D.animation_finished
 		set_physics_process(true)
 		shooting = false
+	#elif shooting:
+		
 		
 
 
@@ -92,4 +100,6 @@ func _on_ears_body_exited(body):
 
 
 func _on_shoot_timer_timeout():
-	shoot() # Replace with function body.
+	shoot()
+	var my_random_number = rng.randf_range(0.5, 2.0)
+	timer.set_wait_time(my_random_number)

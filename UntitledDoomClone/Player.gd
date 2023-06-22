@@ -14,9 +14,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pistol = preload("res://scenes/guns/pistol.tscn")
 @onready var uzi = preload("res://scenes/guns/Uzi.tscn")
 @onready var shotgun = preload("res://scenes/guns/shotun.tscn")
-
+@onready var animation = $AnimationPlayer
+var play = true 
 var current_gun = 0
 @onready var carriedGuns = [pistol, uzi, shotgun]
+@onready var gun = $pivot/gun
 
 
 
@@ -72,20 +74,26 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if PlayerStats.health>0:
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("leftward", "rightward", "forward", "backward")
-	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
+		# Get the input direction and handle the movement/deceleration.
+		# As good practice, you should replace UI actions with custom gameplay actions.
+		var input_dir = Input.get_vector("leftward", "rightward", "forward", "backward")
+		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)	
+		move_and_slide()
+		
+	elif PlayerStats.health==0 and play == true:
+		animation.play("death")
+		$pivot/gun.queue_free()
+		play = false
+		
 
 

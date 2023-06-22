@@ -1,10 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://b40v61neclsf8"]
+[gd_scene load_steps=8 format=3 uid="uid://b40v61neclsf8"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_14jfr"]
 [ext_resource type="PackedScene" uid="uid://rerw62s2suhi" path="res://scenes/guns/pistol.tscn" id="2_hp6ax"]
 [ext_resource type="Texture2D" uid="uid://6knq3e2um1m0" path="res://textures/crosshair.png" id="3_i2gco"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ytiq0"]
+
+[sub_resource type="Animation" id="Animation_ev4ok"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pivot/camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_32irv"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pivot/camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4cpry"]
+_data = {
+"RESET": SubResource("Animation_ev4ok"),
+"death": SubResource("Animation_32irv")
+}
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_14jfr")
@@ -42,3 +78,8 @@ texture = ExtResource("3_i2gco")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CapsuleShape3D_ytiq0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4cpry")
+}
