@@ -52,7 +52,14 @@ billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_ssqjy")
 animation = &"rocket"
-frame_progress = 0.82468
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ssqjy")
+animation = &"explode"
 
 [node name="slpashDamage" type="Area3D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c67n2pudhnjmb"]
+[gd_scene load_steps=12 format=3 uid="uid://c67n2pudhnjmb"]
 
 [ext_resource type="Script" path="res://Gun.gd" id="1_qocvl"]
 [ext_resource type="Texture2D" uid="uid://drlvot8hn8vdn" path="res://textures/rpg/misfa0.png" id="2_5lq8p"]
@@ -10,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://bix2kcbwy3vpg" path="res://sound/DSPISTOL.ogg" id="7_wi4ou"]
 [ext_resource type="Texture2D" uid="uid://ddgf4em1dwgev" path="res://textures/rpg/misff0.png" id="8_vlrsj"]
 [ext_resource type="Texture2D" uid="uid://cwb0ef7s55kl" path="res://textures/rpg/misfg0.png" id="9_ch3t3"]
-[ext_resource type="Texture2D" uid="uid://ox25sykvfqg4" path="res://textures/rpg/misga0.png" id="10_0dkbt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
 animations = [{
@@ -51,7 +50,19 @@ animations = [{
 "texture": ExtResource("9_ch3t3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_0dkbt")
+"texture": ExtResource("8_vlrsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4v2wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5u5e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3n1k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_py8gn")
 }],
 "loop": false,
 "name": &"shoot",
@@ -80,7 +91,9 @@ position = Vector2(141, 41)
 rotation = 3.14159
 scale = Vector2(2.46771, 2.66538)
 sprite_frames = SubResource("SpriteFrames_3liy7")
-animation = &"idle"
+animation = &"shoot"
+frame = 13
+frame_progress = 1.0
 centered = false
 flip_h = true
 flip_v = true

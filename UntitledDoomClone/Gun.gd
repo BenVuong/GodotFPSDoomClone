@@ -17,7 +17,9 @@ func launchProjectile():
 	var newRocket = rocket.instantiate()
 	get_node("/root/level").add_child(newRocket)
 	newRocket.global_transform = spawnLocation.global_transform
-
+	
+	
+	
 func check_hit(dmg):
 	for ray in gunRay:
 		if ray.is_colliding():

@@ -10,6 +10,7 @@ extends CharacterBody3D
 var shooting = false
 var dead = false
 var speed = 1
+var startingHealth = 20
 var health = 20
 var isShot = false
 var searching = false
@@ -31,7 +32,7 @@ func death():
 	
 	animation.visible = false
 	animation2.visible = true
-	if health>-health:
+	if health>=-startingHealth:
 		animation2.play("die")
 	else:
 		animation2.play("explode")
