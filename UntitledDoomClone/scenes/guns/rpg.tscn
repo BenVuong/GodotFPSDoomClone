@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://hl630nvt5hgr" path="res://textures/rpg/misfc0.png" id="5_3n1k5"]
 [ext_resource type="Texture2D" uid="uid://bm67vjgyd4msw" path="res://textures/rpg/misfd0.png" id="6_5u5e1"]
 [ext_resource type="Texture2D" uid="uid://dcq8w1xjw42k5" path="res://textures/rpg/misfe0.png" id="7_4v2wb"]
-[ext_resource type="AudioStream" uid="uid://bix2kcbwy3vpg" path="res://sound/DSPISTOL.ogg" id="7_wi4ou"]
 [ext_resource type="Texture2D" uid="uid://ddgf4em1dwgev" path="res://textures/rpg/misff0.png" id="8_vlrsj"]
 [ext_resource type="Texture2D" uid="uid://cwb0ef7s55kl" path="res://textures/rpg/misfg0.png" id="9_ch3t3"]
+[ext_resource type="AudioStream" uid="uid://cr5cpfgantnn7" path="res://sound/dsrlaunc.ogg" id="10_gfwgk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3liy7"]
 animations = [{
@@ -101,10 +101,10 @@ flip_v = true
 [node name="ray" type="Node3D" parent="."]
 
 [node name="RayCast3D" type="RayCast3D" parent="ray"]
-target_position = Vector3(0, 0, -20)
+target_position = Vector3(0, 0, -50)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_wi4ou")
+stream = ExtResource("10_gfwgk")
 volume_db = -5.0
 
 [node name="Marker3D" type="Marker3D" parent="."]

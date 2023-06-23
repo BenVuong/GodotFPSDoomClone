@@ -61,9 +61,14 @@ func updateTargetLocation(targetLocation):
 func _physics_process(delta):
 	if dead:
 		return
-	if isShot == false or (searching == true and not shooting):
+	
+	if eyes.is_colliding():
+			if eyes.get_collider().is_in_group("Player"):
+				searching = true
+	look_at(target,Vector3.UP)
+	if  (searching == true and not shooting):
 		animation.play("walking")
-		look_at(target,Vector3.UP)
+		
 		var currentLocation = global_transform.origin
 		var nextLocation = navAgent.get_next_path_position()
 		var newVel = (nextLocation-currentLocation) * speed
@@ -77,6 +82,7 @@ func _physics_process(delta):
 func shoot():
 	if searching and not dead and not shooting:
 		set_physics_process(false)
+		#searching = false
 		shooting = true
 		animation.play("shoot")
 		await $AnimatedSprite3D.frame_changed
@@ -86,6 +92,7 @@ func shoot():
 		await $AnimatedSprite3D.animation_finished
 		set_physics_process(true)
 		shooting = false
+		#searching = false
 	#elif shooting:
 		
 		
@@ -93,13 +100,13 @@ func shoot():
 
 func _on_ears_body_entered(body):
 	if body.is_in_group("Player"):
-		set_physics_process(false)
+		set_physics_process(true)
 		searching = true
 
 
 func _on_ears_body_exited(body):
 	if body.is_in_group("Player"):
-		set_physics_process(true)
+		set_physics_process(false)
 		searching = false
 
 

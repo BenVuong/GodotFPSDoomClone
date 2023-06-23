@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://m6xa7vdcpk0b"]
+[gd_scene load_steps=11 format=3 uid="uid://m6xa7vdcpk0b"]
 
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_lid8x"]
 [ext_resource type="Texture2D" uid="uid://b2y6uyshl8fhs" path="res://textures/rpg/mislc0.png" id="2_4dvsd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c14fcpd3ecgcy" path="res://textures/rpg/misle0.png" id="4_wy831"]
 [ext_resource type="Texture2D" uid="uid://bq2ajw4tcotnk" path="res://textures/rpg/mislf0.png" id="5_q2eax"]
 [ext_resource type="Texture2D" uid="uid://gimvpmjcqqnw" path="res://textures/rpg/misla5.png" id="6_hjxs2"]
+[ext_resource type="AudioStream" uid="uid://cbohewbfsc605" path="res://sound/dsbarexp.ogg" id="7_238rf"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_po0he"]
 
@@ -66,6 +67,9 @@ animation = &"explode"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="slpashDamage"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("SphereShape3D_wkv8p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_238rf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="slpashDamage" to="." method="_on_slpash_damage_body_entered"]

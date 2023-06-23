@@ -31,11 +31,13 @@ alignment = 2
 [node name="armorLabel" type="Label" parent="MarginContainer/stats/lables"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "Armor:"
 
 [node name="healthLabel" type="Label" parent="MarginContainer/stats/lables"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "Health:
 "
@@ -46,12 +48,14 @@ alignment = 2
 
 [node name="armorValue" type="Label" parent="MarginContainer/stats/values"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "0
 "
 
 [node name="healthValue" type="Label" parent="MarginContainer/stats/values"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "100
 "
@@ -63,6 +67,7 @@ alignment = 2
 
 [node name="ammoValue" type="Label" parent="MarginContainer/stats/ammo"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qt5f6")
 text = "0
 "

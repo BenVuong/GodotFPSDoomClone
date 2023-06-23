@@ -180,7 +180,7 @@ autostart = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.795, 0)
-billboard = 1
+billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_sw0eb")
 animation = &"idle"
@@ -196,10 +196,11 @@ animation = &"die"
 [node name="ears" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ears"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CylinderShape3D_mi8aa")
 
 [node name="eyes" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -6.55671e-07, -1, 0, 15, -4.37114e-08, 0, 0, 0)
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]

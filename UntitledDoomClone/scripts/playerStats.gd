@@ -8,7 +8,7 @@ var armor = 0
 var max_armor = 100
 var guns_carried = []
 var ammo_pistol = 50
-var ammo_rocket = 0
+var ammo_rocket = 5
 var ammo_shells = 10
 var ammo_plasma = 0
 var ammo_max_pistol = 200
@@ -28,7 +28,7 @@ func reset():
 	max_armor = 100
 	guns_carried = []
 	ammo_pistol = 50
-	ammo_rocket = 0
+	ammo_rocket = 5
 	ammo_shells = 10
 	ammo_plasma = 0
 	ammo_max_pistol = 200

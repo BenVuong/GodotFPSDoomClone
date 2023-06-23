@@ -5,6 +5,7 @@ var damage = 100
 var splashDamage = 50
 @onready var animation = $AnimatedSprite3D
 @onready var animation2 = $AnimatedSprite3D2
+@onready var sound = $AudioStreamPlayer2D
 #@onready var camera = preload("res://player.tscn")
 func dealDamage():
 	var enemies = get_overlapping_bodies()
@@ -38,8 +39,12 @@ func _on_body_entered(body):
 	animation.visible = false
 	animation2.visible = true
 	animation2.play("explode")
+	sound.play()
 	dealDamage()
+	monitoring = false
 	await $AnimatedSprite3D2.animation_finished
+	animation2.visible = false
+	await sound.finished
 	#animation2.visible = false
 	queue_free()
 

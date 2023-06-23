@@ -9,8 +9,13 @@ func _process(delta):
 	armor.text = PlayerStats.get_armor()
 	health.text = PlayerStats.get_health()
 	
-	if currentGun == "pistol" or currentGun == "uzi":
-		ammo.text = PlayerStats.get_pistol_ammo()
-	elif currentGun == "shotgun":
-		ammo.text = PlayerStats.get_shotgun_ammo()
+	match currentGun:
+		"pistol":
+			ammo.text = PlayerStats.get_pistol_ammo()
+		"uzi":
+			ammo.text = PlayerStats.get_pistol_ammo()
+		"shotgun":
+			ammo.text = PlayerStats.get_shotgun_ammo()
+		"rpg":
+			ammo.text = PlayerStats.get_rocket_ammo()
 		
