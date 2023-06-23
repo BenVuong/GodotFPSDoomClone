@@ -1,3 +1,6 @@
+newmtl retroTexturePack/BRICK_2A
+map_Kd textures\retroTexturePack\BRICK_2A.png
+
 newmtl retroTexturePack/FLOOR_1A
 map_Kd textures\retroTexturePack\FLOOR_1A.png
 

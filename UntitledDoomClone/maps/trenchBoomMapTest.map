@@ -265,4 +265,40 @@
 ( 400 32 96 ) ( 400 32 112 ) ( 112 32 112 ) retroTexturePack/PIPES_2A 16 16 -810 1 1
 ( 400 -16 112 ) ( 400 32 112 ) ( 400 32 96 ) retroTexturePack/PIPES_2A 48 0 -810 1 1
 }
+// brush 29
+{
+( -48 -96 32 ) ( -48 -95 32 ) ( -48 -96 33 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -96 32 ) ( -48 -96 33 ) ( -47 -96 32 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -96 32 ) ( -47 -96 32 ) ( -48 -95 32 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -80 48 ) ( 64 -79 48 ) ( 65 -80 48 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -80 48 ) ( 65 -80 48 ) ( 64 -80 49 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -80 48 ) ( 64 -80 49 ) ( 64 -79 48 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+}
+// brush 30
+{
+( -48 -80 28 ) ( -48 -79 28 ) ( -48 -80 29 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -80 28 ) ( -48 -80 29 ) ( -47 -80 28 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -80 28 ) ( -47 -80 28 ) ( -48 -79 28 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -64 44 ) ( 64 -63 44 ) ( 65 -64 44 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -64 44 ) ( 65 -64 44 ) ( 64 -64 45 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -64 44 ) ( 64 -64 45 ) ( 64 -63 44 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+}
+// brush 31
+{
+( -48 -64 24 ) ( -48 -63 24 ) ( -48 -64 25 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -64 24 ) ( -48 -64 25 ) ( -47 -64 24 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -64 24 ) ( -47 -64 24 ) ( -48 -63 24 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -48 40 ) ( 64 -47 40 ) ( 65 -48 40 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -48 40 ) ( 65 -48 40 ) ( 64 -48 41 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -48 40 ) ( 64 -48 41 ) ( 64 -47 40 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+}
+// brush 32
+{
+( -48 -48 20 ) ( -48 -47 20 ) ( -48 -48 21 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -48 20 ) ( -48 -48 21 ) ( -47 -48 20 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( -48 -48 20 ) ( -47 -48 20 ) ( -48 -47 20 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -32 36 ) ( 64 -31 36 ) ( 65 -32 36 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -32 36 ) ( 65 -32 36 ) ( 64 -32 37 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+( 64 -32 36 ) ( 64 -32 37 ) ( 64 -31 36 ) retroTexturePack/BRICK_2A 0 0 0 1 1
+}
 }

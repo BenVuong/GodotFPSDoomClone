@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://squrumisvff0"]
 
-[ext_resource type="Script" path="res://scripts/rpgPickup.gd" id="1_g2tvi"]
-[ext_resource type="Texture2D" uid="uid://dal5aq4okdwyl" path="res://textures/itemPickups/weapons/launa0.png" id="2_ov50e"]
+[ext_resource type="Script" path="res://scripts/rpgPickup.gd" id="1_f2b42"]
+[ext_resource type="Texture2D" uid="uid://dal5aq4okdwyl" path="res://textures/itemPickups/weapons/launa0.png" id="2_w1s5d"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_guibu"]
 
 [node name="rpgPickup" type="Area3D"]
-script = ExtResource("1_g2tvi")
+script = ExtResource("1_f2b42")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 2
 texture_filter = 0
-texture = ExtResource("2_ov50e")
+texture = ExtResource("2_w1s5d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_guibu")

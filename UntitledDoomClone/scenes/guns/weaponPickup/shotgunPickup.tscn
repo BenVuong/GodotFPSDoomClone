@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cla7vhmotmpnv"]
+
+[ext_resource type="Script" path="res://scripts/shotgunPickup.gd" id="1_cdjfo"]
+[ext_resource type="Texture2D" uid="uid://dartedajwaxlk" path="res://textures/itemPickups/weapons/xsota0.png" id="2_2g8ur"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_guibu"]
+
+[node name="shotgunPickup" type="Area3D"]
+script = ExtResource("1_cdjfo")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_2g8ur")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_guibu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

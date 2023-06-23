@@ -7,13 +7,11 @@ func _ready():
 
 
 func _on_body_entered(body):
-	if body.is_in_group("Player") :
-		PlayerStats.change_rocket_ammo(5)
-		if PlayerStats.guns_carried.has("rpg") == false:
-			PlayerStats.guns_carried.append("rpg")
+	if body.is_in_group("Player"):
+		PlayerStats.change_shotgun_ammo(10)
+		if PlayerStats.guns_carried.has("shotgun") == false:
+			PlayerStats.guns_carried.append("shotgun")
 			PlayerStats.changeWeapon = true
-			
 		
 		#Player.current_gun = 2
 		queue_free()
-

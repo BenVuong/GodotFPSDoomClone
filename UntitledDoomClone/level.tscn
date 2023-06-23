@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=15 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/autoShotGunGrunt.tscn" id="6_ds2wk"]
 [ext_resource type="PackedScene" uid="uid://d3n75ckc46xeb" path="res://maps/newMapTest.tscn" id="6_jvimi"]
 [ext_resource type="PackedScene" uid="uid://p265rxvckues" path="res://scenes/health_pickup.tscn" id="6_rg2rw"]
-[ext_resource type="PackedScene" uid="uid://squrumisvff0" path="res://scenes/rpgPickup.tscn" id="7_lywlh"]
+[ext_resource type="PackedScene" uid="uid://squrumisvff0" path="res://scenes/guns/weaponPickup/rpgPickup.tscn" id="7_vtqx5"]
+[ext_resource type="PackedScene" uid="uid://cla7vhmotmpnv" path="res://scenes/guns/weaponPickup/shotgunPickup.tscn" id="8_6cibi"]
+[ext_resource type="PackedScene" uid="uid://cjb20m521rqa8" path="res://scenes/guns/weaponPickup/uziPickup.tscn" id="9_rvyrt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -34,7 +36,7 @@ script = ExtResource("1_7j3t3")
 environment = SubResource("Environment_mpyct")
 
 [node name="Player" parent="." instance=ExtResource("2_uhani")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.132527, 2.33523, 4.73121)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.132527, 2.24476, 2.58315)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["enemy"]]
 transform = Transform3D(0.0227914, 4.08477, 0.0941453, 0, 2.28318, -0.168474, -1.45082, 0.064169, 0.00147896, -4.80488, 1.87117, 1.85692)
@@ -56,8 +58,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80198, 1.22601, -1.42)
 
 [node name="HUD" parent="." instance=ExtResource("5_wnkfy")]
 
-[node name="Node3D" parent="." instance=ExtResource("6_jvimi")]
+[node name="map" parent="." instance=ExtResource("6_jvimi")]
 transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0.591, 0.074, 2.392)
+
+[node name="rpgPickup" parent="." instance=ExtResource("7_vtqx5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.07695, 2.17718, 5.4783)
 
 [node name="healthPickup" parent="." instance=ExtResource("6_rg2rw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.04916, 1.43096, -1.37752)
@@ -68,8 +73,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.9834, 1.43096, 1.95892)
 [node name="healthPickup3" parent="." instance=ExtResource("6_rg2rw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.03088, 1.43096, -15.934)
 
-[node name="rpgPickup" parent="." instance=ExtResource("7_lywlh")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.02007, 1.5733, 5.29564)
+[node name="shotgunPickup" parent="." instance=ExtResource("8_6cibi")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.95861, 1.48597, 0.468662)
 
-[node name="rpgPickup2" parent="." instance=ExtResource("7_lywlh")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.57405, 1.5733, 0.879642)
+[node name="uziPickup" parent="." instance=ExtResource("9_rvyrt")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.97533, 1.42782, 4.05151)

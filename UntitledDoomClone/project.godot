@@ -23,6 +23,7 @@ PlayerStats="*res://scripts/playerStats.gd"
 
 window/size/mode=2
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

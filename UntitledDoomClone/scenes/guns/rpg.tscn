@@ -29,15 +29,6 @@ animations = [{
 "texture": ExtResource("3_qt43r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_5lq8p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_py8gn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_3n1k5")
-}, {
-"duration": 1.0,
 "texture": ExtResource("6_5u5e1")
 }, {
 "duration": 1.0,
@@ -87,12 +78,13 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="gunsprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+texture_filter = 1
 position = Vector2(141, 41)
 rotation = 3.14159
 scale = Vector2(2.46771, 2.66538)
 sprite_frames = SubResource("SpriteFrames_3liy7")
 animation = &"shoot"
-frame = 13
+frame = 10
 frame_progress = 1.0
 centered = false
 flip_h = true

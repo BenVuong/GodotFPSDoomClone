@@ -44,21 +44,21 @@ func _process(delta):
 	
 func changeGun(gun):
 	$pivot/gun.get_child(0).queue_free()
-	var gunCode = PlayerStats.guns_carried[gun]
-	match gunCode:
-		0:
+	var gunName = PlayerStats.guns_carried[gun]
+	match gunName:
+		"pistol":
 			var newGun = pistol.instantiate()
 			$pivot/gun.add_child(newGun)
 			PlayerStats.current_gun = newGun.name
-		1:
+		"uzi":
 			var newGun = uzi.instantiate()
 			$pivot/gun.add_child(newGun)
 			PlayerStats.current_gun = newGun.name
-		2:
+		"shotgun":
 			var newGun = shotgun.instantiate()
 			$pivot/gun.add_child(newGun)
 			PlayerStats.current_gun = newGun.name
-		3:
+		"rpg":
 			var newGun = rpg.instantiate()
 			$pivot/gun.add_child(newGun)
 			PlayerStats.current_gun = newGun.name

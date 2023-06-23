@@ -232,6 +232,38 @@ v 400 112 16
 v 400 96 16
 v 400 96 -32
 v 400 112 -32
+v -48 32 80
+v -48 32 96
+v -48 48 96
+v -48 48 80
+v 64 48 96
+v 64 32 96
+v 64 32 80
+v 64 48 80
+v -48 28 64
+v -48 28 80
+v -48 44 80
+v -48 44 64
+v 64 44 80
+v 64 28 80
+v 64 28 64
+v 64 44 64
+v -48 24 48
+v -48 24 64
+v -48 40 64
+v -48 40 48
+v 64 40 64
+v 64 24 64
+v 64 24 48
+v 64 40 48
+v -48 20 32
+v -48 20 48
+v -48 36 48
+v -48 36 32
+v 64 36 48
+v 64 20 48
+v 64 20 32
+v 64 36 32
 
 # texture coordinates
 vt 2 0.25
@@ -581,6 +613,39 @@ vt -0.25 6.25
 vt -1 0.5
 vt -1 -0.25
 vt -0.75 -0.25
+vt -1.25 0.5
+vt -1.5 0.5
+vt -1.5 0.75
+vt -0.75 0.75
+vt 1 0.5
+vt 1 -1.5
+vt -0.75 -1.5
+vt -0.75 -1.25
+vt -1 0.4375
+vt -1.25 0.4375
+vt -1.25 0.6875
+vt -1 0.6875
+vt 1 0.6875
+vt -0.75 0.6875
+vt -0.75 0.4375
+vt 1 0.4375
+vt -0.75 -1
+vt -0.75 0.375
+vt -1 0.375
+vt -1 0.625
+vt -0.75 0.625
+vt 1 0.625
+vt 1 0.375
+vt -0.75 -0.75
+vt 1 -0.75
+vt -0.5 0.3125
+vt -0.75 0.3125
+vt -0.75 0.5625
+vt -0.5 0.5625
+vt 1 0.5625
+vt 1 0.3125
+vt -0.75 -0.5
+vt 1 -0.5
 
 # normals
 vn -1 0 -0
@@ -995,4 +1060,60 @@ usemtl retroTexturePack/PIPES_2A
 f  231/341/5  225/340/5  228/241/5  232/339/5
 usemtl retroTexturePack/PIPES_2A
 f  232/345/6  229/346/6  230/347/6  231/6/6
+
+o entity0_brush29
+usemtl retroTexturePack/BRICK_2A
+f  233/348/1  234/349/1  235/350/1  236/21/1
+usemtl retroTexturePack/BRICK_2A
+f  237/13/2  235/351/2  234/6/2  238/352/2
+usemtl retroTexturePack/BRICK_2A
+f  238/353/3  234/354/3  233/355/3  239/28/3
+usemtl retroTexturePack/BRICK_2A
+f  240/28/4  236/355/4  235/354/4  237/353/4
+usemtl retroTexturePack/BRICK_2A
+f  239/352/5  233/6/5  236/351/5  240/13/5
+usemtl retroTexturePack/BRICK_2A
+f  240/21/6  237/350/6  238/349/6  239/348/6
+
+o entity0_brush30
+usemtl retroTexturePack/BRICK_2A
+f  241/356/1  242/357/1  243/358/1  244/359/1
+usemtl retroTexturePack/BRICK_2A
+f  245/360/2  243/361/2  242/362/2  246/363/2
+usemtl retroTexturePack/BRICK_2A
+f  246/28/3  242/355/3  241/364/3  247/29/3
+usemtl retroTexturePack/BRICK_2A
+f  248/29/4  244/364/4  243/355/4  245/28/4
+usemtl retroTexturePack/BRICK_2A
+f  247/363/5  241/362/5  244/361/5  248/360/5
+usemtl retroTexturePack/BRICK_2A
+f  248/359/6  245/358/6  246/357/6  247/356/6
+
+o entity0_brush31
+usemtl retroTexturePack/BRICK_2A
+f  249/365/1  250/366/1  251/367/1  252/368/1
+usemtl retroTexturePack/BRICK_2A
+f  253/369/2  251/368/2  250/365/2  254/370/2
+usemtl retroTexturePack/BRICK_2A
+f  254/29/3  250/364/3  249/371/3  255/372/3
+usemtl retroTexturePack/BRICK_2A
+f  256/372/4  252/371/4  251/364/4  253/29/4
+usemtl retroTexturePack/BRICK_2A
+f  255/370/5  249/365/5  252/368/5  256/369/5
+usemtl retroTexturePack/BRICK_2A
+f  256/368/6  253/367/6  254/366/6  255/365/6
+
+o entity0_brush32
+usemtl retroTexturePack/BRICK_2A
+f  257/373/1  258/374/1  259/375/1  260/376/1
+usemtl retroTexturePack/BRICK_2A
+f  261/377/2  259/375/2  258/374/2  262/378/2
+usemtl retroTexturePack/BRICK_2A
+f  262/372/3  258/371/3  257/379/3  263/380/3
+usemtl retroTexturePack/BRICK_2A
+f  264/380/4  260/379/4  259/371/4  261/372/4
+usemtl retroTexturePack/BRICK_2A
+f  263/378/5  257/374/5  260/375/5  264/377/5
+usemtl retroTexturePack/BRICK_2A
+f  264/376/6  261/375/6  262/374/6  263/373/6
 

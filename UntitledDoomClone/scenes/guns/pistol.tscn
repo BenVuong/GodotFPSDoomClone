@@ -54,6 +54,7 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="gunsprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+texture_filter = 1
 position = Vector2(-125, 39.638)
 rotation = 3.14159
 scale = Vector2(3.38202, 3.65294)
