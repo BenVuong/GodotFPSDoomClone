@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://p265rxvckues"]
+
+[ext_resource type="Script" path="res://scripts/healthPickup.gd" id="1_i7mej"]
+[ext_resource type="Texture2D" uid="uid://nas55u04m832" path="res://textures/itemPickups/health/media0.png" id="2_con2e"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_guibu"]
+
+[node name="health_pickup" type="Area3D"]
+script = ExtResource("1_i7mej")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_con2e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_guibu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

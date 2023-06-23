@@ -11,17 +11,17 @@ const sway = 30
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $pivot
 @onready var camera := $pivot/camera
-@onready var pistol = preload("res://scenes/guns/pistol.tscn")
-@onready var uzi = preload("res://scenes/guns/Uzi.tscn")
-@onready var shotgun = preload("res://scenes/guns/shotun.tscn")
-@onready var rpg = preload("res://scenes/guns/rpg.tscn")
+
 @onready var animation = $AnimationPlayer
 var play = true 
 var current_gun = 0
-@onready var carriedGuns = [pistol, uzi, shotgun, rpg]
+#@onready var carriedGuns = [pistol, shotgun]
 @onready var gun = $pivot/gun
 
-
+@onready var pistol = preload("res://scenes/guns/pistol.tscn")#0
+@onready var uzi = preload("res://scenes/guns/Uzi.tscn")#1
+@onready var shotgun = preload("res://scenes/guns/shotun.tscn")#2
+@onready var rpg = preload("res://scenes/guns/rpg.tscn")#3
 
 func reloadGame():
 	if Input.is_action_pressed("reloadGame"):
@@ -32,21 +32,36 @@ func reloadGame():
 func _process(delta):
 	if Input.is_action_just_pressed("nextGun") and PlayerStats.health>0:
 		current_gun+=1
-		if current_gun > len(carriedGuns)-1:
+		if current_gun > len(PlayerStats.guns_carried)-1:
 			current_gun = 0
-		changeGun(current_gun)
+		changeGun( current_gun)
 	elif Input.is_action_just_pressed("prevGun")and PlayerStats.health>0:
 		current_gun-=1
 		if current_gun < 0:
-			current_gun = len(carriedGuns)-1
-		changeGun(current_gun)
+			current_gun = len(PlayerStats.guns_carried)-1
+		changeGun( current_gun)
 		
 	
 func changeGun(gun):
 	$pivot/gun.get_child(0).queue_free()
-	var newGun = carriedGuns[gun].instantiate()
-	$pivot/gun.add_child(newGun)
-	PlayerStats.current_gun = newGun.name
+	var gunCode = PlayerStats.guns_carried[gun]
+	match gunCode:
+		0:
+			var newGun = pistol.instantiate()
+			$pivot/gun.add_child(newGun)
+			PlayerStats.current_gun = newGun.name
+		1:
+			var newGun = uzi.instantiate()
+			$pivot/gun.add_child(newGun)
+			PlayerStats.current_gun = newGun.name
+		2:
+			var newGun = shotgun.instantiate()
+			$pivot/gun.add_child(newGun)
+			PlayerStats.current_gun = newGun.name
+		3:
+			var newGun = rpg.instantiate()
+			$pivot/gun.add_child(newGun)
+			PlayerStats.current_gun = newGun.name
 func _ready():
 	#hand.set_as_toplevel(true)
 	
@@ -68,6 +83,11 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	#hand.global_transform.origin - handLoc.global_tranform.origin
 	#fire()
+	if PlayerStats.changeWeapon == true:
+		current_gun = len(PlayerStats.guns_carried)-1
+		changeGun( current_gun)
+		PlayerStats.changeWeapon = false
+		
 	
 	reloadGame()
 	# Add the gravity.

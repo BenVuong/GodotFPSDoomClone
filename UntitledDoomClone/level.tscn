@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=13 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
 [ext_resource type="PackedScene" uid="uid://bj551mbne6mk4" path="res://scenes/hud.tscn" id="5_wnkfy"]
 [ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/autoShotGunGrunt.tscn" id="6_ds2wk"]
 [ext_resource type="PackedScene" uid="uid://d3n75ckc46xeb" path="res://maps/newMapTest.tscn" id="6_jvimi"]
+[ext_resource type="PackedScene" uid="uid://p265rxvckues" path="res://scenes/health_pickup.tscn" id="6_rg2rw"]
+[ext_resource type="PackedScene" uid="uid://squrumisvff0" path="res://scenes/rpgPickup.tscn" id="7_lywlh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -56,3 +58,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80198, 1.22601, -1.42)
 
 [node name="Node3D" parent="." instance=ExtResource("6_jvimi")]
 transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0.591, 0.074, 2.392)
+
+[node name="healthPickup" parent="." instance=ExtResource("6_rg2rw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.04916, 1.43096, -1.37752)
+
+[node name="healthPickup2" parent="." instance=ExtResource("6_rg2rw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.9834, 1.43096, 1.95892)
+
+[node name="healthPickup3" parent="." instance=ExtResource("6_rg2rw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.03088, 1.43096, -15.934)
+
+[node name="rpgPickup" parent="." instance=ExtResource("7_lywlh")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.02007, 1.5733, 5.29564)
+
+[node name="rpgPickup2" parent="." instance=ExtResource("7_lywlh")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.57405, 1.5733, 0.879642)
