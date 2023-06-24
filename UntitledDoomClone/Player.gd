@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const camShake = 1
-const SPEED = 5.0
+const SPEED = 5#original value is 5.0
 const JUMP_VELOCITY = 4.5
 var damage = 10
 var originalCameraTransform = Transform3D()
@@ -17,7 +17,7 @@ var play = true
 var current_gun = 0
 #@onready var carriedGuns = [pistol, shotgun]
 @onready var gun = $pivot/gun
-
+@onready var interactRay = $pivot/interactRay
 @onready var pistol = preload("res://scenes/guns/pistol.tscn")#0
 @onready var uzi = preload("res://scenes/guns/Uzi.tscn")#1
 @onready var shotgun = preload("res://scenes/guns/shotun.tscn")#2
@@ -30,16 +30,24 @@ func reloadGame():
 		PlayerStats.reset()
 	
 func _process(delta):
-	if Input.is_action_just_pressed("nextGun") and PlayerStats.health>0:
+	if Input.is_action_just_pressed("nextGun") and PlayerStats.health>0 and len(PlayerStats.guns_carried) != 1 :
 		current_gun+=1
 		if current_gun > len(PlayerStats.guns_carried)-1:
 			current_gun = 0
 		changeGun( current_gun)
-	elif Input.is_action_just_pressed("prevGun")and PlayerStats.health>0:
+	elif Input.is_action_just_pressed("prevGun")and PlayerStats.health>0 and len(PlayerStats.guns_carried) != 1:
 		current_gun-=1
 		if current_gun < 0:
 			current_gun = len(PlayerStats.guns_carried)-1
 		changeGun( current_gun)
+	elif Input.is_action_just_pressed("use")and PlayerStats.health>0:
+		if interactRay.is_colliding():
+			if interactRay.get_collider().is_in_group("door"):
+				interactRay.get_collider().get_node("AnimationPlayer").play("open")
+				
+				print("opening door")
+			
+	
 		
 	
 func changeGun(gun):
