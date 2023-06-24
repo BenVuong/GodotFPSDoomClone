@@ -15,7 +15,7 @@ var health = 20
 var isShot = false
 var searching = false
 var target
-var damage = 10
+var damage = 5
 var rng = RandomNumberGenerator.new()
 
 func _ready():

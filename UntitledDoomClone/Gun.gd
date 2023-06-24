@@ -9,6 +9,11 @@ extends Node3D
 
 var can_shoot = true
 
+#weapon damage stats:
+var pistolDmg = 10
+var uziDmg = 2
+var shotgunDmg = 10
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gun_sprite.play("idle")
@@ -43,7 +48,7 @@ func _process(delta):
 				PlayerStats.change_pistol_ammo(-1)
 				print(PlayerStats.get_pistol_ammo())
 				gun_sprite.play("shoot")
-				check_hit(2)
+				check_hit(uziDmg)
 				make_flash()
 				can_shoot = false
 				await $CanvasLayer/Control/gunsprite.animation_finished
@@ -55,7 +60,7 @@ func _process(delta):
 				PlayerStats.change_pistol_ammo(-1)
 				print(PlayerStats.get_pistol_ammo())
 				gun_sprite.play("shoot")
-				check_hit(5)
+				check_hit(pistolDmg)
 				make_flash()
 				can_shoot = false
 				await $CanvasLayer/Control/gunsprite.animation_finished
@@ -67,7 +72,7 @@ func _process(delta):
 				PlayerStats.change_shotgun_ammo(-1)
 				print(PlayerStats.get_shotgun_ammo())
 				gun_sprite.play("shoot")
-				check_hit(10)
+				check_hit(shotgunDmg)
 				make_flash()
 				can_shoot = false
 				await $CanvasLayer/Control/gunsprite.animation_finished

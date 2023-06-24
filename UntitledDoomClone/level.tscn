@@ -1,14 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=18 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
+[ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/Enemies/autoShotGunGrunt.tscn" id="5_ay6fb"]
 [ext_resource type="PackedScene" uid="uid://bj551mbne6mk4" path="res://scenes/hud.tscn" id="5_wnkfy"]
-[ext_resource type="PackedScene" uid="uid://dxexmhhu17xkh" path="res://scenes/autoShotGunGrunt.tscn" id="6_ds2wk"]
 [ext_resource type="PackedScene" uid="uid://d3n75ckc46xeb" path="res://maps/newMapTest.tscn" id="6_jvimi"]
 [ext_resource type="PackedScene" uid="uid://p265rxvckues" path="res://scenes/health_pickup.tscn" id="6_rg2rw"]
 [ext_resource type="PackedScene" uid="uid://squrumisvff0" path="res://scenes/guns/weaponPickup/rpgPickup.tscn" id="7_vtqx5"]
 [ext_resource type="PackedScene" uid="uid://cla7vhmotmpnv" path="res://scenes/guns/weaponPickup/shotgunPickup.tscn" id="8_6cibi"]
 [ext_resource type="PackedScene" uid="uid://cjb20m521rqa8" path="res://scenes/guns/weaponPickup/uziPickup.tscn" id="9_rvyrt"]
+[ext_resource type="PackedScene" uid="uid://dqxvi3pn3e8yg" path="res://scenes/guns/ammoPickup/bulletPickup.tscn" id="10_xp371"]
+[ext_resource type="PackedScene" uid="uid://bspivjxv2v7mh" path="res://scenes/guns/ammoPickup/shellPickup.tscn" id="11_jw3ca"]
+[ext_resource type="PackedScene" uid="uid://bf1uhamgitsgs" path="res://scenes/guns/ammoPickup/rocketPickup.tscn" id="12_wxfag"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,7 +39,7 @@ script = ExtResource("1_7j3t3")
 environment = SubResource("Environment_mpyct")
 
 [node name="Player" parent="." instance=ExtResource("2_uhani")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.132527, 2.24476, 2.58315)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46732, 2.24476, 2.58315)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["enemy"]]
 transform = Transform3D(0.0227914, 4.08477, 0.0941453, 0, 2.28318, -0.168474, -1.45082, 0.064169, 0.00147896, -4.80488, 1.87117, 1.85692)
@@ -47,34 +50,51 @@ shape = SubResource("BoxShape3D_a8qjl")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_k1pex")
 
-[node name="autoShotGunGrunt" parent="." instance=ExtResource("6_ds2wk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97872, 1.22601, -11.882)
-
-[node name="autoShotGunGrunt3" parent="." instance=ExtResource("6_ds2wk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.19615, 1.31979, 2.15268)
-
-[node name="autoShotGunGrunt2" parent="." instance=ExtResource("6_ds2wk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80198, 1.22601, -1.42)
-
 [node name="HUD" parent="." instance=ExtResource("5_wnkfy")]
 
 [node name="map" parent="." instance=ExtResource("6_jvimi")]
 transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0.591, 0.074, 2.392)
 
-[node name="rpgPickup" parent="." instance=ExtResource("7_vtqx5")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.07695, 2.17718, 5.4783)
+[node name="Enemies" type="Node3D" parent="."]
 
-[node name="healthPickup" parent="." instance=ExtResource("6_rg2rw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.04916, 1.43096, -1.37752)
+[node name="autoShotGunGrunt" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6629, 1.226, -1.78268)
 
-[node name="healthPickup2" parent="." instance=ExtResource("6_rg2rw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.9834, 1.43096, 1.95892)
+[node name="autoShotGunGrunt2" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15848, 1.226, -6.55446)
 
-[node name="healthPickup3" parent="." instance=ExtResource("6_rg2rw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.03088, 1.43096, -15.934)
+[node name="autoShotGunGrunt3" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81107, 1.226, 1.95551)
 
-[node name="shotgunPickup" parent="." instance=ExtResource("8_6cibi")]
+[node name="WeaponPickups" type="Node3D" parent="."]
+
+[node name="shotgunPickup" parent="WeaponPickups" instance=ExtResource("8_6cibi")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.95861, 1.48597, 0.468662)
 
-[node name="uziPickup" parent="." instance=ExtResource("9_rvyrt")]
+[node name="uziPickup" parent="WeaponPickups" instance=ExtResource("9_rvyrt")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.97533, 1.42782, 4.05151)
+
+[node name="rpgPickup" parent="WeaponPickups" instance=ExtResource("7_vtqx5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.09446, 2.10845, 5.08349)
+
+[node name="HealthPickup" type="Node3D" parent="."]
+
+[node name="healthPickup" parent="HealthPickup" instance=ExtResource("6_rg2rw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.04916, 1.43096, -1.37752)
+
+[node name="healthPickup2" parent="HealthPickup" instance=ExtResource("6_rg2rw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.9834, 1.43096, 1.95892)
+
+[node name="healthPickup3" parent="HealthPickup" instance=ExtResource("6_rg2rw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.03088, 1.43096, -15.934)
+
+[node name="AmmoPickup" type="Node3D" parent="."]
+
+[node name="bulletPickup" parent="AmmoPickup" instance=ExtResource("10_xp371")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.15685, 1.39253, 1.88338)
+
+[node name="shellPickup" parent="AmmoPickup" instance=ExtResource("11_jw3ca")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.89658, 1.40406, -3.81031)
+
+[node name="rocketPickup" parent="AmmoPickup" instance=ExtResource("12_wxfag")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.18163, 1.478, 1.83113)

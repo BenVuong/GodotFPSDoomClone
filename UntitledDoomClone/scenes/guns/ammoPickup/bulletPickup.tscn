@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqxvi3pn3e8yg"]
+
+[ext_resource type="Script" path="res://scripts/bulletPickup.gd" id="1_1rink"]
+[ext_resource type="Texture2D" uid="uid://w2j4nlhawsdd" path="res://textures/itemPickups/ammo/ammoa0.png" id="2_tjqnn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_guibu"]
+
+[node name="bulletPickup" type="Area3D"]
+script = ExtResource("1_1rink")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_tjqnn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_guibu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bspivjxv2v7mh"]
+
+[ext_resource type="Script" path="res://scripts/shellPickup.gd" id="1_b0f6v"]
+[ext_resource type="Texture2D" uid="uid://dtwsdhoojaegc" path="res://textures/itemPickups/ammo/sboxa0.png" id="2_tpfej"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_guibu"]
+
+[node name="shellPickup" type="Area3D"]
+script = ExtResource("1_b0f6v")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_tpfej")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_guibu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

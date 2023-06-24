@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and PlayerStats.ammo_shells < PlayerStats.ammo_max_shells:
 		PlayerStats.change_shotgun_ammo(10)
 		if PlayerStats.guns_carried.has("shotgun") == false:
 			PlayerStats.guns_carried.append("shotgun")
