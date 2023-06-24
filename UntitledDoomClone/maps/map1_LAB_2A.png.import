@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b08dcsa6u1o4v"
-path.s3tc="res://.godot/imported/FLOOR_2A.png-efb4d23522b28c69c6792da2345c723d.s3tc.ctex"
+uid="uid://e8vf8gi21qv"
+path.s3tc="res://.godot/imported/map1_LAB_2A.png-5a6b7580d0b86c61e7cd76a2a5b02f22.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://maps/textures/retroTexturePack/FLOOR_2A.png"
-dest_files=["res://.godot/imported/FLOOR_2A.png-efb4d23522b28c69c6792da2345c723d.s3tc.ctex"]
+source_file="res://maps/map1_LAB_2A.png"
+dest_files=["res://.godot/imported/map1_LAB_2A.png-5a6b7580d0b86c61e7cd76a2a5b02f22.s3tc.ctex"]
 
 [params]
 

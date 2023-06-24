@@ -1,0 +1,24 @@
+newmtl retroTexturePack/CRATE_2I
+map_Kd textures\retroTexturePack\CRATE_2I.png
+
+newmtl retroTexturePack/DOOR_2F
+map_Kd textures\retroTexturePack\DOOR_2F.png
+
+newmtl retroTexturePack/FLOOR_1A
+map_Kd textures\retroTexturePack\FLOOR_1A.png
+
+newmtl retroTexturePack/LAB_2A
+map_Kd textures\retroTexturePack\LAB_2A.png
+
+newmtl retroTexturePack/LIGHT_1B
+map_Kd textures\retroTexturePack\LIGHT_1B.png
+
+newmtl retroTexturePack/PIPES_1B
+map_Kd textures\retroTexturePack\PIPES_1B.png
+
+newmtl retroTexturePack/PIPES_2A
+map_Kd textures\retroTexturePack\PIPES_2A.png
+
+newmtl retroTexturePack/TECH_0A
+map_Kd textures\retroTexturePack\TECH_0A.png
+
