@@ -19,6 +19,15 @@ map_Kd textures\retroTexturePack\PIPES_1B.png
 newmtl retroTexturePack/PIPES_2A
 map_Kd textures\retroTexturePack\PIPES_2A.png
 
+newmtl retroTexturePack/SUPPORT_1C
+map_Kd textures\retroTexturePack\SUPPORT_1C.png
+
 newmtl retroTexturePack/TECH_0A
 map_Kd textures\retroTexturePack\TECH_0A.png
+
+newmtl retroTexturePack/TECH_0E
+map_Kd textures\retroTexturePack\TECH_0E.png
+
+newmtl retroTexturePack/TECH_1A
+map_Kd textures\retroTexturePack\TECH_1A.png
 

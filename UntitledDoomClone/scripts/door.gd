@@ -12,6 +12,7 @@ func _process(delta):
 
 
 func _on_animation_player_animation_finished(open):
+	get_node("Timer").set_wait_time(3)
 	get_node("Timer").start()
 	
 	

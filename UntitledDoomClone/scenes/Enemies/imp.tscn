@@ -1,0 +1,186 @@
+[gd_scene load_steps=28 format=3 uid="uid://g6yjg2a3voxo"]
+
+[ext_resource type="Script" path="res://scripts/imp.gd" id="1_eoyjy"]
+[ext_resource type="Texture2D" uid="uid://cx6usscqaekpk" path="res://textures/enemy/imp/sprites/trooh1.png" id="2_2qmuj"]
+[ext_resource type="Texture2D" uid="uid://chsp6i25jvbim" path="res://textures/enemy/imp/sprites/trooi0.png" id="3_umju7"]
+[ext_resource type="Texture2D" uid="uid://b520suif8bsua" path="res://textures/enemy/imp/sprites/trooj0.png" id="4_epyyq"]
+[ext_resource type="Texture2D" uid="uid://cyktkhe81iv6k" path="res://textures/enemy/imp/sprites/trook0.png" id="5_xbt5j"]
+[ext_resource type="Texture2D" uid="uid://d03npc7weuy3r" path="res://textures/enemy/imp/sprites/trool0.png" id="6_as5x6"]
+[ext_resource type="Texture2D" uid="uid://bt8x71gtupqk0" path="res://textures/enemy/imp/sprites/troom0.png" id="7_qo5xk"]
+[ext_resource type="Texture2D" uid="uid://deowy7kxew8bi" path="res://textures/enemy/imp/sprites/troon0.png" id="8_symv3"]
+[ext_resource type="Texture2D" uid="uid://biaomp8ky8q23" path="res://textures/enemy/imp/sprites/trooo0.png" id="9_ca8n1"]
+[ext_resource type="Texture2D" uid="uid://cvkxjakjs0hcu" path="res://textures/enemy/imp/sprites/troop0.png" id="10_hle27"]
+[ext_resource type="Texture2D" uid="uid://bh14qidfxppyy" path="res://textures/enemy/imp/sprites/trooq0.png" id="11_50c3i"]
+[ext_resource type="Texture2D" uid="uid://c1i6jl8icjbni" path="res://textures/enemy/imp/sprites/troor0.png" id="12_14363"]
+[ext_resource type="Texture2D" uid="uid://l673i82nvq53" path="res://textures/enemy/imp/sprites/troos0.png" id="13_8kknf"]
+[ext_resource type="Texture2D" uid="uid://c334ukftxosq0" path="res://textures/enemy/imp/sprites/troot0.png" id="14_sudpm"]
+[ext_resource type="Texture2D" uid="uid://bdek531duomfs" path="res://textures/enemy/imp/sprites/troou0.png" id="15_yiq4w"]
+[ext_resource type="Texture2D" uid="uid://dcv2ofmsmlhc7" path="res://textures/enemy/imp/sprites/trooa1.png" id="16_nggdn"]
+[ext_resource type="Texture2D" uid="uid://d0hp0ub4h53ny" path="res://textures/enemy/imp/sprites/trooe1.png" id="17_dh55t"]
+[ext_resource type="Texture2D" uid="uid://x3tsfugpno7x" path="res://textures/enemy/imp/sprites/troof1.png" id="18_f2pex"]
+[ext_resource type="Texture2D" uid="uid://cigki8rjbemsf" path="res://textures/enemy/imp/sprites/troog1.png" id="19_v4p8m"]
+[ext_resource type="Texture2D" uid="uid://cc7qgpyxqunux" path="res://textures/enemy/imp/sprites/troob1.png" id="20_p6qfe"]
+[ext_resource type="Texture2D" uid="uid://blw4qj6upoh38" path="res://textures/enemy/imp/sprites/trooc1.png" id="21_ea5gy"]
+[ext_resource type="Texture2D" uid="uid://c45ggwap3o8yi" path="res://textures/enemy/imp/sprites/trood1.png" id="22_xumsv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qj7l3"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2fdb5"]
+material = SubResource("StandardMaterial3D_qj7l3")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ek7cn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mi8aa"]
+radius = 3.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wkn6o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_umju7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_epyyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xbt5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_as5x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qo5xk")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_symv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ca8n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hle27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_50c3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_14363")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8kknf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sudpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yiq4w")
+}],
+"loop": false,
+"name": &"exploade",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2qmuj")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_nggdn")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_dh55t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_f2pex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v4p8m")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_nggdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_p6qfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ea5gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xumsv")
+}],
+"loop": false,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="imp" type="CharacterBody3D" groups=["enemies"]]
+script = ExtResource("1_eoyjy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_2fdb5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ek7cn")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="shootTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="ears" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ears"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CylinderShape3D_mi8aa")
+
+[node name="eyes" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -6.55671e-07, -1, 0, 15, -4.37114e-08, 0, 0, 0)
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.872485, -0.00955307)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.795, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_wkn6o")
+animation = &"shoot"
+frame = 2
+frame_progress = 1.0
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.305035, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_wkn6o")
+animation = &"exploade"
+frame = 7
+frame_progress = 1.0
+
+[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]
+[connection signal="body_exited" from="ears" to="." method="_on_ears_body_exited"]

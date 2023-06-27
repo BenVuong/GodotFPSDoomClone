@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8n04kkxhc0cq"
-path.s3tc="res://.godot/imported/TECH_0E.png-121045166ddc58ac26c93bd7e0f58ac8.s3tc.ctex"
+uid="uid://x3tsfugpno7x"
+path.s3tc="res://.godot/imported/troof1.png-087bcce30702e11568c39bc20eb5fbbf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://maps/textures/retroTexturePack/TECH_0E.png"
-dest_files=["res://.godot/imported/TECH_0E.png-121045166ddc58ac26c93bd7e0f58ac8.s3tc.ctex"]
+source_file="res://textures/enemy/imp/sprites/troof1.png"
+dest_files=["res://.godot/imported/troof1.png-087bcce30702e11568c39bc20eb5fbbf.s3tc.ctex"]
 
 [params]
 

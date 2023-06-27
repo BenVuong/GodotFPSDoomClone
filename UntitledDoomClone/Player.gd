@@ -30,6 +30,10 @@ func reloadGame():
 		PlayerStats.reset()
 	
 func _process(delta):
+	
+
+	
+	
 	if Input.is_action_just_pressed("nextGun") and PlayerStats.health>0 and len(PlayerStats.guns_carried) != 1 :
 		current_gun+=1
 		if current_gun > len(PlayerStats.guns_carried)-1:

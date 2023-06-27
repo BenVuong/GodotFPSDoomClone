@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var animation2 = $AnimatedSprite3D2
 @onready var eyes = $eyes
 @onready var timer = $shootTimer
-@onready var rocket = preload("res://scenes/rocket.tscn")
+@onready var rocket = preload("res://scenes/impFireBall.tscn")
 @onready var spawnLocation = $Marker3D
 
 var shooting = false
@@ -93,11 +93,11 @@ func shoot():
 		shooting = true
 		animation.play("shoot")
 		await $AnimatedSprite3D.frame_changed
-		if eyes.is_colliding():
-			if eyes.get_collider().is_in_group("Player"):
-				PlayerStats.change_health(-damage)
+		#if eyes.is_colliding():
+		#	if eyes.get_collider().is_in_group("Player"):
+		#		PlayerStats.change_health(-damage)
 		
-		#launchProjectile()
+		launchProjectile()
 		
 		await $AnimatedSprite3D.animation_finished
 		set_physics_process(true)

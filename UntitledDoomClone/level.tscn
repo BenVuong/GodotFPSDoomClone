@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dsnp3jvqwugj3"]
+[gd_scene load_steps=19 format=3 uid="uid://dsnp3jvqwugj3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_7j3t3"]
 [ext_resource type="PackedScene" uid="uid://b40v61neclsf8" path="res://player.tscn" id="2_uhani"]
@@ -11,10 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cjb20m521rqa8" path="res://scenes/guns/weaponPickup/uziPickup.tscn" id="9_rvyrt"]
 [ext_resource type="PackedScene" uid="uid://dqxvi3pn3e8yg" path="res://scenes/guns/ammoPickup/bulletPickup.tscn" id="10_xp371"]
 [ext_resource type="PackedScene" uid="uid://bspivjxv2v7mh" path="res://scenes/guns/ammoPickup/shellPickup.tscn" id="11_jw3ca"]
-[ext_resource type="PackedScene" uid="uid://djjbryy11w8rh" path="res://scenes/door.tscn" id="12_e2qef"]
-[ext_resource type="Script" path="res://scripts/door.gd" id="12_kx72x"]
-[ext_resource type="Texture2D" uid="uid://dupy8743i185s" path="res://maps/textures/retroTexturePack/DOOR_2A.png" id="12_ufmwx"]
 [ext_resource type="PackedScene" uid="uid://bf1uhamgitsgs" path="res://scenes/guns/ammoPickup/rocketPickup.tscn" id="12_wxfag"]
+[ext_resource type="PackedScene" uid="uid://g6yjg2a3voxo" path="res://scenes/Enemies/imp.tscn" id="13_2sbp1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0drh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -33,68 +31,6 @@ fog_density = 0.0169
 [sub_resource type="BoxShape3D" id="BoxShape3D_a8qjl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_k1pex"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2e5bd"]
-albedo_texture = ExtResource("12_ufmwx")
-uv1_scale = Vector3(3, 2.079, 3)
-uv1_offset = Vector3(0, -0.034, 0)
-
-[sub_resource type="BoxMesh" id="BoxMesh_y4q22"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jddh1"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="Animation" id="Animation_m5bmu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.390517, 3.64033, 0.169641)]
-}
-
-[sub_resource type="Animation" id="Animation_yvasw"]
-resource_name = "close"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.390517, 5.92916, 0.169641), Vector3(0.390517, 3.64033, 0.169641)]
-}
-
-[sub_resource type="Animation" id="Animation_dq0ux"]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.390517, 3.64033, 0.169641), Vector3(0.390517, 5.92916, 0.169641)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_prspr"]
-_data = {
-"RESET": SubResource("Animation_m5bmu"),
-"close": SubResource("Animation_yvasw"),
-"open": SubResource("Animation_dq0ux")
-}
 
 [node name="level" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00858426, -0.0740126, -0.0575289)
@@ -122,16 +58,31 @@ transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0.591, 0.074, 2.3
 
 [node name="Enemies" type="Node3D" parent="."]
 
+[node name="autoShotGunGrunt" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98704, 1.226, -7.44561)
+
+[node name="autoShotGunGrunt2" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1265, 1.226, -31.0686)
+
+[node name="imp" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31639, 1.226, -20.4586)
+
+[node name="imp2" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260278, 1.226, -20.4586)
+
+[node name="imp3" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12575, 1.226, -22.3745)
+
 [node name="WeaponPickups" type="Node3D" parent="."]
 
 [node name="shotgunPickup" parent="WeaponPickups" instance=ExtResource("8_6cibi")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.95861, 1.48597, 0.468662)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.9578, 1.48597, 2.10589)
 
 [node name="uziPickup" parent="WeaponPickups" instance=ExtResource("9_rvyrt")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.97533, 1.42782, 4.05151)
 
 [node name="rpgPickup" parent="WeaponPickups" instance=ExtResource("7_vtqx5")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.09446, 2.10845, 5.08349)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.94815, 2.58491, -31.1703)
 
 [node name="HealthPickup" type="Node3D" parent="."]
 
@@ -156,38 +107,3 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.89658, 1.40406, -3.81031)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.18163, 1.478, 1.83113)
 
 [node name="Node3D" type="Node3D" parent="."]
-
-[node name="door" parent="Node3D" instance=ExtResource("12_e2qef")]
-transform = Transform3D(1.273, 0, 0, 0, 1, 0, 0, 0, 1, 1.246, -1.256, -2.446)
-
-[node name="door2" type="Node3D" parent="Node3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.53206, -1.22383, 2.52154)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/door2"]
-transform = Transform3D(1.749, 0, 0, 0, 2.271, 0, 0, 0, 0.145, 0.390517, 3.64033, 0.169641)
-material_override = SubResource("StandardMaterial3D_2e5bd")
-mesh = SubResource("BoxMesh_y4q22")
-skeleton = NodePath("../..")
-script = ExtResource("12_kx72x")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/door2/MeshInstance3D" groups=["door"]]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/door2/MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_jddh1")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D/door2/MeshInstance3D/StaticBody3D"]
-root_node = NodePath("../../..")
-libraries = {
-"": SubResource("AnimationLibrary_prspr")
-}
-
-[node name="Timer" type="Timer" parent="Node3D/door2/MeshInstance3D"]
-
-[node name="autoShotGunGrunt" parent="." instance=ExtResource("5_ay6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98704, 1.226, -7.44561)
-
-[node name="autoShotGunGrunt2" parent="." instance=ExtResource("5_ay6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59766, 1.226, -25.2967)
-
-[connection signal="animation_finished" from="Node3D/door2/MeshInstance3D/StaticBody3D/AnimationPlayer" to="Node3D/door2/MeshInstance3D" method="_on_animation_player_animation_finished"]
-[connection signal="timeout" from="Node3D/door2/MeshInstance3D/Timer" to="Node3D/door2/MeshInstance3D" method="_on_timer_timeout"]

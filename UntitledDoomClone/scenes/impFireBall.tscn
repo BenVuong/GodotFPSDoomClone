@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://3od0k5ajdnxy"]
+
+[ext_resource type="Script" path="res://scripts/impFireBall.gd" id="1_i17jc"]
+[ext_resource type="Texture2D" uid="uid://b2y6uyshl8fhs" path="res://textures/rpg/mislc0.png" id="2_k63d1"]
+[ext_resource type="Texture2D" uid="uid://uajmb5ca7ajf" path="res://textures/rpg/misld0.png" id="3_mqwf3"]
+[ext_resource type="Texture2D" uid="uid://c14fcpd3ecgcy" path="res://textures/rpg/misle0.png" id="4_yhxuj"]
+[ext_resource type="Texture2D" uid="uid://bq2ajw4tcotnk" path="res://textures/rpg/mislf0.png" id="5_2iinr"]
+[ext_resource type="Texture2D" uid="uid://y8nxck33p7dr" path="res://textures/enemy/imp/sprites/manfa1.png" id="6_2erd6"]
+[ext_resource type="AudioStream" uid="uid://cbohewbfsc605" path="res://sound/dsbarexp.ogg" id="7_xh7pm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_po0he"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ssqjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k63d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mqwf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yhxuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2iinr")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2erd6")
+}],
+"loop": true,
+"name": &"rocket",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wkv8p"]
+radius = 0.876664
+
+[node name="impFireBall" type="Area3D"]
+script = ExtResource("1_i17jc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("SphereShape3D_po0he")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ssqjy")
+animation = &"rocket"
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ssqjy")
+animation = &"explode"
+
+[node name="slpashDamage" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="slpashDamage"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_wkv8p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_xh7pm")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_xh7pm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="slpashDamage" to="." method="_on_slpash_damage_body_entered"]

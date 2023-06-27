@@ -134,6 +134,9 @@ animations = [{
 "texture": ExtResource("12_4wpsk")
 }, {
 "duration": 1.0,
+"texture": ExtResource("12_4wpsk")
+}, {
+"duration": 1.0,
 "texture": ExtResource("11_8r6om")
 }],
 "loop": false,
@@ -191,7 +194,7 @@ visible = false
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_sw0eb")
-animation = &"die"
+animation = &"idle"
 
 [node name="ears" type="Area3D" parent="."]
 
@@ -201,6 +204,9 @@ shape = SubResource("CylinderShape3D_mi8aa")
 
 [node name="eyes" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -6.55671e-07, -1, 0, 15, -4.37114e-08, 0, 0, 0)
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.5)
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]
