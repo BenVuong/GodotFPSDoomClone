@@ -206,7 +206,7 @@ shape = SubResource("CylinderShape3D_mi8aa")
 transform = Transform3D(1, 0, 0, 0, -6.55671e-07, -1, 0, 15, -4.37114e-08, 0, 0, 0)
 
 [node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]

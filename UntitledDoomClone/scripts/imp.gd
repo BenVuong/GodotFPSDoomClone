@@ -19,6 +19,7 @@ var searching = false
 var target
 var damage = 5
 var rng = RandomNumberGenerator.new()
+var painChance = 50
 
 func launchProjectile():
 	var newRocket = rocket.instantiate()
@@ -43,23 +44,27 @@ func death():
 		animation2.play("die")
 	else:
 		animation2.play("explode")
+		
+
 func takeDamage(dmg):
+	#var painNum = rng.randf_range(0, 100)
 	print("I have been shot")
-	animation.play("hit")
 	health -= dmg
-	
+	#if painNum>=painChance:
+	animation.play("hit")
+		
+		
 	isShot = true
-	#set_process(false)
+		#set_process(false)
 	set_physics_process(false)
 	await $AnimatedSprite3D.animation_finished
 	isShot = false
-	#set_process(true)
+		#set_process(true)
 	set_physics_process(true)
 	
 	if health <=0:
 		dead = true
 		death()
-	
 
 func updateTargetLocation(targetLocation):
 	navAgent.set_target_position(targetLocation)

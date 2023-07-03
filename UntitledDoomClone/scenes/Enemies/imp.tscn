@@ -82,7 +82,7 @@ animations = [{
 "texture": ExtResource("15_yiq4w")
 }],
 "loop": false,
-"name": &"exploade",
+"name": &"explode",
 "speed": 5.0
 }, {
 "frames": [{
@@ -160,16 +160,14 @@ shape = SubResource("CylinderShape3D_mi8aa")
 transform = Transform3D(1, 0, 0, 0, -6.55671e-07, -1, 0, 15, -4.37114e-08, 0, 0, 0)
 
 [node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.872485, -0.00955307)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10046, -0.00955307)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.795, 0)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_wkn6o")
-animation = &"shoot"
-frame = 2
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.305035, 0)
@@ -177,9 +175,7 @@ visible = false
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_wkn6o")
-animation = &"exploade"
-frame = 7
-frame_progress = 1.0
+animation = &"explode"
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]

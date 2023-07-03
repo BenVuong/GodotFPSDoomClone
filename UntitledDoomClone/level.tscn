@@ -76,13 +76,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12575, 1.226, -22.3745)
 [node name="WeaponPickups" type="Node3D" parent="."]
 
 [node name="shotgunPickup" parent="WeaponPickups" instance=ExtResource("8_6cibi")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.9578, 1.48597, 2.10589)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9578, 1.48597, 2.10589)
 
 [node name="uziPickup" parent="WeaponPickups" instance=ExtResource("9_rvyrt")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.97533, 1.42782, 4.05151)
 
 [node name="rpgPickup" parent="WeaponPickups" instance=ExtResource("7_vtqx5")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.94815, 2.58491, -31.1703)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.94815, 2.17658, -29.6607)
 
 [node name="HealthPickup" type="Node3D" parent="."]
 
