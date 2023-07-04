@@ -6,8 +6,10 @@ extends CharacterBody3D
 @onready var animation2 = $AnimatedSprite3D2
 @onready var eyes = $eyes
 @onready var timer = $shootTimer
-@onready var shotgun = preload("res://scenes/guns/weaponPickup/shotgunPickup.tscn")
+@onready var pistolAmmomDrop = preload("res://scenes/guns/ammoPickup/bulletPickup.tscn")
 @onready var spawnLocation = $Marker3D
+@onready var deathSound = $AudioStreamPlayer3D
+@onready var attackSound = $AudioStreamPlayer3D2
 
 var shooting = false
 var dead = false
@@ -21,10 +23,10 @@ var damage = 5
 var rng = RandomNumberGenerator.new()
 var painChance = 50
 
-func dropShotGun():
-	var newShotgun = shotgun.instantiate()
-	get_node("/root/level").add_child(newShotgun)
-	newShotgun.global_transform = spawnLocation.global_transform
+func dropPistolAmmo():
+	var ammo = pistolAmmomDrop.instantiate()
+	get_node("/root/level").add_child(ammo)
+	ammo.global_transform = spawnLocation.global_transform
 
 func _ready():
 	animation2.visible = false
@@ -33,6 +35,7 @@ func _ready():
 	
 func death():
 	print("I am dead")
+	
 	set_process(false)
 	set_physics_process(false)
 	$CollisionShape3D.disabled=true
@@ -40,12 +43,15 @@ func death():
 	
 	animation.visible = false
 	animation2.visible = true
+	
 	if health>=-startingHealth:
 		animation2.play("die")
+		deathSound.play()
 	else:
 		animation2.play("explode")
+		deathSound.play()
 		
-	dropShotGun()
+	dropPistolAmmo()
 func takeDamage(dmg):
 	var painNum = rng.randf_range(0, 100)
 	print("I have been shot")
@@ -97,8 +103,10 @@ func shoot():
 		set_physics_process(false)
 		#searching = false
 		shooting = true
+		
 		animation.play("shoot")
 		await $AnimatedSprite3D.frame_changed
+		attackSound.play()
 		if eyes.is_colliding():
 			if eyes.get_collider().is_in_group("Player"):
 				PlayerStats.change_health(-damage)

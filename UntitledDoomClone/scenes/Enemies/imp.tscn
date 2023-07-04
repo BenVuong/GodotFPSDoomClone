@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://g6yjg2a3voxo"]
+[gd_scene load_steps=29 format=3 uid="uid://g6yjg2a3voxo"]
 
 [ext_resource type="Script" path="res://scripts/imp.gd" id="1_eoyjy"]
 [ext_resource type="Texture2D" uid="uid://cx6usscqaekpk" path="res://textures/enemy/imp/sprites/trooh1.png" id="2_2qmuj"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cc7qgpyxqunux" path="res://textures/enemy/imp/sprites/troob1.png" id="20_p6qfe"]
 [ext_resource type="Texture2D" uid="uid://blw4qj6upoh38" path="res://textures/enemy/imp/sprites/trooc1.png" id="21_ea5gy"]
 [ext_resource type="Texture2D" uid="uid://c45ggwap3o8yi" path="res://textures/enemy/imp/sprites/trood1.png" id="22_xumsv"]
+[ext_resource type="AudioStream" uid="uid://dvslid737nkp0" path="res://sound/impDeath.ogg" id="23_pnugi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qj7l3"]
 albedo_color = Color(1, 0, 0, 1)
@@ -176,6 +177,9 @@ billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_wkn6o")
 animation = &"explode"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("23_pnugi")
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]

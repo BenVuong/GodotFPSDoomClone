@@ -8,7 +8,7 @@ extends CharacterBody3D
 @onready var timer = $shootTimer
 @onready var rocket = preload("res://scenes/impFireBall.tscn")
 @onready var spawnLocation = $Marker3D
-
+@onready var deathSound = $AudioStreamPlayer3D
 var shooting = false
 var dead = false
 var speed = 1
@@ -42,8 +42,10 @@ func death():
 	animation2.visible = true
 	if health>=-startingHealth:
 		animation2.play("die")
+		deathSound.play()
 	else:
 		animation2.play("explode")
+		deathSound.play()
 		
 
 func takeDamage(dmg):

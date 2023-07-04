@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dxexmhhu17xkh"]
+[gd_scene load_steps=32 format=3 uid="uid://dxexmhhu17xkh"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_ed6nv"]
 [ext_resource type="Texture2D" uid="uid://1uja8artq4aj" path="res://textures/enemy/autoshotgunGuy/sprites/asgzg1.png" id="2_p2c3c"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://2w48y7mtgfwl" path="res://textures/enemy/autoshotgunGuy/sprites/asgzu0.png" id="16_eyu6o"]
 [ext_resource type="Texture2D" uid="uid://coqhtsbpsl8h6" path="res://textures/enemy/autoshotgunGuy/sprites/asgzv0.png" id="17_qbw5d"]
 [ext_resource type="Texture2D" uid="uid://blr7dwpmuql7o" path="res://textures/enemy/autoshotgunGuy/sprites/asgzw0.png" id="18_jpcqg"]
+[ext_resource type="AudioStream" uid="uid://duoqm002kncm1" path="res://sound/zombieDeath.ogg" id="25_tobxk"]
+[ext_resource type="AudioStream" uid="uid://c6hl168wuerr0" path="res://sound/ogDoomPistol.ogg" id="26_unk0h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qj7l3"]
 albedo_color = Color(1, 0, 0, 1)
@@ -207,6 +209,13 @@ transform = Transform3D(1, 0, 0, 0, -6.55671e-07, -1, 0, 15, -4.37114e-08, 0, 0,
 
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("25_tobxk")
+volume_db = -10.0
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("26_unk0h")
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_entered" from="ears" to="." method="_on_ears_body_entered"]
