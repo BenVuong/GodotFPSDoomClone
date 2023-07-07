@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://j12vwf3qdksa"]
+[gd_scene load_steps=3 format=3 uid="uid://j12vwf3qdksa"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_vkatr"]
+[ext_resource type="FontFile" uid="uid://btioietj17e22" path="res://fonts/Phased.ttf" id="2_ygf40"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -11,28 +12,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vkatr")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -50.5
+offset_right = 35.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
 layout_mode = 2
 
-[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ygf40")
+text = "Untitled Doom Clone"
+
+[node name="Start" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Start
 "
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Options
 "
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exit
 "
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

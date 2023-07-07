@@ -12,8 +12,8 @@ extends CharacterBody3D
 var shooting = false
 var dead = false
 var speed = 1
-var startingHealth = 20
-var health = 20
+var startingHealth = 50
+var health = 50
 var isShot = false
 var searching = false
 var target
