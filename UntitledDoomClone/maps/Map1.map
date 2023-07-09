@@ -840,4 +840,13 @@
 ( -448 64 32 ) ( -448 64 96 ) ( -512 64 96 ) retroTexturePack/DOOR_4B -2 32 0 1 1
 ( -448 48 96 ) ( -448 64 96 ) ( -448 64 32 ) retroTexturePack/DOOR_4B -32 32 90 1 1
 }
+// brush 91
+{
+( -496 84 96 ) ( -496 72 96 ) ( -496 72 80 ) retroTexturePack/CRATE_1A 17 -9 0 1 1
+( -496 72 96 ) ( -464 72 96 ) ( -464 72 80 ) retroTexturePack/CRATE_1A -3 -13 0 1 1
+( -464 72 80 ) ( -464 84 80 ) ( -496 84 80 ) retroTexturePack/CRATE_1A -2 -22 0 1 1
+( -496 84 96 ) ( -464 84 96 ) ( -464 72 96 ) __TB_empty 0 0 0 1 1
+( -464 84 80 ) ( -464 84 96 ) ( -496 84 96 ) retroTexturePack/exit1 15.6666565 0 180 1 -1
+( -464 72 96 ) ( -464 84 96 ) ( -464 84 80 ) retroTexturePack/CRATE_1A 9 -7 0 1 1
+}
 }

@@ -1,3 +1,8 @@
+newmtl __TB_empty
+
+newmtl retroTexturePack/CRATE_1A
+map_Kd textures\retroTexturePack\CRATE_1A.png
+
 newmtl retroTexturePack/CRATE_2I
 map_Kd textures\retroTexturePack\CRATE_2I.png
 
@@ -30,4 +35,7 @@ map_Kd textures\retroTexturePack\TECH_0A.png
 
 newmtl retroTexturePack/TECH_1A
 map_Kd textures\retroTexturePack\TECH_1A.png
+
+newmtl retroTexturePack/exit1
+map_Kd textures\retroTexturePack\exit1.png
 

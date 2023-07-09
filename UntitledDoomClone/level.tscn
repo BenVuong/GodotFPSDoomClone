@@ -94,6 +94,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76309, 1.226, -22.1878)
 [node name="autoShotGunGrunt7" parent="Enemies" instance=ExtResource("5_ay6fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96604, 1.226, -12.9125)
 
+[node name="imp6" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8595, 1.226, -2.36866)
+
+[node name="imp7" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2391, 1.226, -2.39318)
+
+[node name="imp8" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9077, 1.226, -2.8182)
+
+[node name="imp9" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0683, 1.226, -6.31964)
+
+[node name="imp10" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2705, 1.226, -6.39652)
+
+[node name="imp11" parent="Enemies" instance=ExtResource("13_2sbp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9193, 1.226, -5.84725)
+
+[node name="autoShotGunGrunt8" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7483, 1.226, -1.03344)
+
+[node name="autoShotGunGrunt9" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2857, 1.226, -1.03344)
+
+[node name="autoShotGunGrunt10" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6393, 1.226, 2.23359)
+
+[node name="autoShotGunGrunt11" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8587, 1.226, 6.16602)
+
+[node name="autoShotGunGrunt12" parent="Enemies" instance=ExtResource("5_ay6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0668, 1.226, 5.12128)
+
 [node name="WeaponPickups" type="Node3D" parent="."]
 
 [node name="shotgunPickup" parent="WeaponPickups" instance=ExtResource("8_6cibi")]
@@ -125,21 +158,3 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.89658, 1.40406, -3.81031)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.18163, 1.478, 1.83113)
 
 [node name="Node3D" type="Node3D" parent="."]
-
-[node name="imp" parent="." instance=ExtResource("13_2sbp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8595, 1.226, -2.36866)
-
-[node name="imp2" parent="." instance=ExtResource("13_2sbp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2391, 1.226, -2.39318)
-
-[node name="imp3" parent="." instance=ExtResource("13_2sbp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9077, 1.226, -2.8182)
-
-[node name="imp4" parent="." instance=ExtResource("13_2sbp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0683, 1.226, -6.31964)
-
-[node name="imp5" parent="." instance=ExtResource("13_2sbp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2705, 1.226, -6.39652)
-
-[node name="imp6" parent="." instance=ExtResource("13_2sbp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9193, 1.226, -5.84725)

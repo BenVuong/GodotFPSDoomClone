@@ -863,7 +863,7 @@ shape = SubResource("ConcavePolygonShape3D_02ost")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="entity0_brush9/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_edh8w")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="entity0_brush90" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="entity0_brush90" index="0" groups=["exit"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="entity0_brush90/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_qsgwt")

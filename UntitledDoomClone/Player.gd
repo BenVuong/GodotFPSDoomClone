@@ -50,6 +50,9 @@ func _process(delta):
 				interactRay.get_collider().get_node("AnimationPlayer").play("open")
 				
 				print("opening door")
+			elif interactRay.get_collider().is_in_group("exit"):
+				print("You win")
+				get_tree().change_scene_to_file("res://scenes/win_screen.tscn")
 			
 	
 		
